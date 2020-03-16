@@ -88,18 +88,26 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Climb to kill it!"
 
 [node name="Intro6" type="Label" parent="."]
-margin_left = 2335.0
-margin_top = 53.2293
-margin_right = 2809.0
-margin_bottom = 169.229
-rect_rotation = 8.39009
+margin_left = 2503.2
+margin_top = -320.003
+margin_right = 2977.2
+margin_bottom = -204.003
+rect_rotation = -8.29175
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "This is a ladder... It does ladder things...
-If you do not know how to use it. You are not a true gamer
-(Touch the ladder)
-(Don't worry, it consents.)
+text = "Kill the slowzoid then pat yoruself in the back
+because there's nothing after that
+qw"
 
-Climb up."
+[node name="Intro7" type="Label" parent="."]
+margin_left = 2503.2
+margin_top = -320.003
+margin_right = 2977.2
+margin_bottom = -204.003
+rect_rotation = -8.29175
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Kill the slowzoid then pat yoruself in the back
+because there's nothing after that
+qw"
 
 [node name="Intro4" type="Label" parent="."]
 margin_left = 561.856
