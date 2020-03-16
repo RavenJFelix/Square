@@ -1,13 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Polygon2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 333.345, 178.074 )
-scale = Vector2( 35.4718, 4.94627 )
+position = Vector2( 1177.81, 255.995 )
+scale = Vector2( 119.918, 12.7383 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 81.4803, -27.7509 )
+
+[node name="slowzoid" parent="." instance=ExtResource( 3 )]
+position = Vector2( 412.533, 86.61 )
