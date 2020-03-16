@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=3]
+[ext_resource path="res://map/motion/ladder/ladder.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,12 +12,32 @@ position = Vector2( 154.179, 129.228 )
 scale = Vector2( 14.9383, 6.44737 )
 
 [node name="StaticBody2D2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 546.529, 121.153 )
+position = Vector2( 531.565, 132.036 )
 scale = Vector2( 10.0933, 3.64487 )
 
 [node name="StaticBody2D3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1622.32, 236.927 )
-scale = Vector2( 57.9293, 3.64487 )
+position = Vector2( 2134.97, 236.927 )
+scale = Vector2( 109.194, 3.64487 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2379.92, 187.861 )
+scale = Vector2( 7.95346, 2.0697 )
+
+[node name="StaticBody2D8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3669.02, -191.55 )
+scale = Vector2( 100.504, 2.0697 )
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2162.37, 96.6607 )
+scale = Vector2( 7.95346, 2.0697 )
+
+[node name="StaticBody2D6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1984.72, -12.5893 )
+scale = Vector2( 7.95346, 2.0697 )
+
+[node name="StaticBody2D7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1802.32, -120.889 )
+scale = Vector2( 7.95346, 2.0697 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64.2994, 20.4222 )
@@ -47,7 +68,7 @@ margin_left = 895.862
 margin_top = 44.6375
 margin_right = 1331.86
 margin_bottom = 160.637
-rect_rotation = -5.22913
+rect_rotation = -2.47876
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Watch out for Slow-zoids! They will slow you down.
 You can only kill them by directly jumping on top of them
@@ -56,6 +77,29 @@ I've extended the idea where it inhbiits jumping so you cannot
 just jump up :)
 
 Keep moving forward to find higher ground! Slowzoids do no damage"
+
+[node name="Intro5" type="Label" parent="."]
+margin_left = 1928.31
+margin_top = 123.396
+margin_right = 2364.31
+margin_bottom = 239.396
+rect_rotation = -2.47876
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Climb to kill it!"
+
+[node name="Intro6" type="Label" parent="."]
+margin_left = 2335.0
+margin_top = 53.2293
+margin_right = 2809.0
+margin_bottom = 169.229
+rect_rotation = 8.39009
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "This is a ladder... It does ladder things...
+If you do not know how to use it. You are not a true gamer
+(Touch the ladder)
+(Don't worry, it consents.)
+
+Climb up."
 
 [node name="Intro4" type="Label" parent="."]
 margin_left = 561.856
@@ -77,5 +121,16 @@ position = Vector2( 19.9446, 49.8615 )
 
 [node name="Polygon2D" parent="slowzoidMan/slowzoidItself" index="0"]
 color = Color( 0, 0, 0, 0.556863 )
+
+[node name="ladder" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2646.89, 11.8719 )
+scale = Vector2( 1, 22.7726 )
+
+[node name="ladder2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2934.98, -437.173 )
+scale = Vector2( 1, 22.7726 )
+
+[node name="slowzoidMan2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3207.11, -312.688 )
 
 [editable path="slowzoidMan"]
