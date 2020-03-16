@@ -6,8 +6,8 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 86.3033, 49.5709 )
-scale = Vector2( 6.24, 1 )
+position = Vector2( 117.169, 159.315 )
+scale = Vector2( 15.1898, 4.6044 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 68.3395, 33.2161 )
