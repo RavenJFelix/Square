@@ -7,7 +7,7 @@ export var climb_lat_speed = 100
 export var climb_speed = 300
 export var JUMP_POWER = 470
 export var speed = 500
-export var max_jumps = 2
+export var max_jumps = 1
 export var speed_mult = 1.0
 
 export var health = 100
@@ -115,7 +115,7 @@ func check_and_exec_reg():
 		consecutive_jumps += 1
 		set_safe_margin(0.001)
 		in_air = 1
-		set_safe_margin(0.002)
+		set_safe_margin(0.01)
 	# Lateral Motion
 	if Input.is_action_pressed("ui_left"):
 		motion.x = -speed * speed_mult
