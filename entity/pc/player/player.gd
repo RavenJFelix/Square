@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 const GRAV = 20
-const JUMP_POWER = 500
-const SPEED = 500
+export var JUMP_POWER = 500
+export var speed = 500
 export var max_jumps = 2
 var motion = Vector2(0, 0)
 var UP = Vector2(0,-1)
@@ -13,6 +13,12 @@ func _ready():
 	
 	pass
 
+func set_speed(new_speed):
+	speed = new_speed
+
+func get_speed():
+	return speed
+
 #Checks for certain input events and executes code accordingly
 func check_and_exec():
 	# Jumping Mechanics
@@ -22,9 +28,9 @@ func check_and_exec():
 	
 	# Lateral Motion
 	if Input.is_action_pressed("ui_left"):
-		motion.x = -SPEED
+		motion.x = -speed
 	elif Input.is_action_pressed("ui_right"):
-		motion.x = SPEED
+		motion.x = speed
 	else:
 		motion.x = 0
 
