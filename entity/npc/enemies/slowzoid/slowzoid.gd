@@ -4,9 +4,7 @@ var moving_right = false
 var motion = Vector2()
 var gravity = 20
 export var speed = 200
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 var manager
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,10 +33,7 @@ func _physics_process(delta):
 	logical_motion()
 	ambient_physics()
 	motion = move_and_slide(motion)
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
 func die():
 	manager.die()
 
