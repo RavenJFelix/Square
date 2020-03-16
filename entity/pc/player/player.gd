@@ -1,8 +1,5 @@
 extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 const GRAV = 20
 const JUMP_POWER = 500
 const SPEED = 500
@@ -16,6 +13,7 @@ func _ready():
 	
 	pass
 
+#Checks for certain input events and executes code accordingly
 func check_and_exec():
 	# Jumping Mechanics
 	if Input.is_action_just_pressed("ui_up") and is_jumpable():
@@ -29,10 +27,6 @@ func check_and_exec():
 		motion.x = SPEED
 	else:
 		motion.x = 0
-		
-	#Gravity Processing
-
-
 
 func is_jumpable():
 	if consecutive_jumps <= max_jumps:
@@ -48,14 +42,11 @@ func process_state():
 		reset_jumps()
 
 func ambient_physical():
+	#Gravity Processing
 	motion.y += GRAV
 func _physics_process(delta):
 	#print(consecutive_jumps)
 	check_and_exec()
 	process_state()
 	motion = move_and_slide(motion, UP)
-	
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
