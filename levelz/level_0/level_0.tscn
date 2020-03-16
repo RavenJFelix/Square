@@ -88,26 +88,33 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Climb to kill it!"
 
 [node name="Intro6" type="Label" parent="."]
-margin_left = 2503.2
-margin_top = -320.003
-margin_right = 2977.2
-margin_bottom = -204.003
+margin_left = 2429.53
+margin_top = 33.5854
+margin_right = 2903.53
+margin_bottom = 149.585
 rect_rotation = -8.29175
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Kill the slowzoid then pat yoruself in the back
-because there's nothing after that
-qw"
+text = "This is a ladder... It does ladder things...
+If you do not know how to use it. You are not a true gamer
+(Touch the ladder)
+(Don't worry, it consents.)
+
+Climb up."
 
 [node name="Intro7" type="Label" parent="."]
-margin_left = 2503.2
-margin_top = -320.003
-margin_right = 2977.2
-margin_bottom = -204.003
-rect_rotation = -8.29175
+margin_left = 2463.91
+margin_top = -344.558
+margin_right = 2937.91
+margin_bottom = -228.558
+rect_rotation = -1.96505
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Kill the slowzoid then pat yoruself in the back
-because there's nothing after that
-qw"
+text = "Kill the slowzoid. Use your nonexistent brain.
+
+There is nothing to do afterwards.
+
+Good Job. 
+
+Now actually kill it because that was a waste of typing if you didn't"
 
 [node name="Intro4" type="Label" parent="."]
 margin_left = 561.856
@@ -141,4 +148,12 @@ scale = Vector2( 1, 22.7726 )
 [node name="slowzoidMan2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3207.11, -312.688 )
 
+[node name="slowzoidItself" parent="slowzoidMan2" index="2"]
+position = Vector2( 19.0403, 9.52002 )
+
+[node name="Polygon2D" parent="slowzoidMan2/slowzoidItself" index="0"]
+color = Color( 0, 0, 0, 0.556863 )
+
 [editable path="slowzoidMan"]
+
+[editable path="slowzoidMan2"]
