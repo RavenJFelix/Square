@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,11 +10,72 @@
 position = Vector2( 154.179, 129.228 )
 scale = Vector2( 14.9383, 6.44737 )
 
+[node name="StaticBody2D2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 546.529, 121.153 )
+scale = Vector2( 10.0933, 3.64487 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1622.32, 236.927 )
+scale = Vector2( 57.9293, 3.64487 )
+
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64.2994, 20.4222 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Intro" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
-rect_rotation = 2.15352
-text = "Hello!"
+rect_rotation = 1.38307
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Hello!
+Left and right arrows to move!"
+
+[node name="Intro2" type="Label" parent="."]
+margin_left = 235.151
+margin_top = -27.805
+margin_right = 426.151
+margin_bottom = 3.19498
+rect_rotation = -3.27278
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Up arrow key to jump!
+Don't fall, I haven't coded death yet
+(for you at least). which means you will be
+stuck falling into an eternal void...
+Yeah. Welcome to alpha testing."
+
+[node name="Intro3" type="Label" parent="."]
+margin_left = 895.862
+margin_top = 44.6375
+margin_right = 1331.86
+margin_bottom = 160.637
+rect_rotation = -5.22913
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Watch out for Slow-zoids! They will slow you down.
+You can only kill them by directly jumping on top of them
+(Idea:Matthew Fulford)
+I've extended the idea where it inhbiits jumping so you cannot
+just jump up :)
+
+Keep moving forward to find higher ground! Slowzoids do no damage"
+
+[node name="Intro4" type="Label" parent="."]
+margin_left = 561.856
+margin_top = -106.323
+margin_right = 961.856
+margin_bottom = -24.3226
+rect_rotation = 6.40926
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You can doulbe-jump!"
+
+[node name="slowzoidMan" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1542.34, 59.588 )
+
+[node name="rightBound" parent="slowzoidMan" index="1"]
+position = Vector2( 377.535, 4.43213 )
+
+[node name="slowzoidItself" parent="slowzoidMan" index="2"]
+position = Vector2( 19.9446, 49.8615 )
+
+[node name="Polygon2D" parent="slowzoidMan/slowzoidItself" index="0"]
+color = Color( 0, 0, 0, 0.556863 )
+
+[editable path="slowzoidMan"]
