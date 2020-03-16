@@ -13,12 +13,12 @@ func _ready():
 func _physics_process(delta):
 	var bodies = {}
 	move_and_slide(still)
-	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.collider
 		#print("Collided with: ", collision.collider.name)
 		if collider.has_method("damage") and (not damaged.has(collider)):
+			get_parent().set_color_damaged()
 			collider.damage(get_parent().damage)
 			damaged[collider] = get_parent().damage_time
 	for damaged_body in damaged:

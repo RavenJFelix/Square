@@ -9,6 +9,8 @@
 color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10, -10, -10 )
 script = ExtResource( 1 )
+damage_color = Color( 1, 0, 0, 1 )
+regular_color = Color( 0.686275, 0, 0, 1 )
 
 [node name="StaticBody2D" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
