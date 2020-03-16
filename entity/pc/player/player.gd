@@ -10,6 +10,7 @@ var consecutive_jumps = 0
 export var speed_mult = 1.0
 var jump_buffer = 0
 var in_air = true
+var max_jump_buffered = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,9 +19,12 @@ func _ready():
 func suppress_max_jumps():
 	jump_buffer = max_jumps
 	max_jumps = 1
+	max_jump_buffered = true
 	#print("max jumps" + String(max_jumps) + String(jump_buffer))
 func restore_max_jumps():
-	max_jumps = jump_buffer
+	if max_jump_buffered:
+		max_jumps = jump_buffer
+		max_jump_buffered = false
 
 func get_motion():
 	return motion

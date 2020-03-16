@@ -46,3 +46,4 @@ func _on_DeathBox_body_entered(body):
 	if body.has_method("is_player") and body.has_method("is_moving_down"):
 		if body.is_moving_down():
 			die()
+			body.restore_jump()
