@@ -35,9 +35,12 @@ func is_jumpable():
 	else:
 		return false
 
+func reset_jumps(jumpnum = 0):
+	consecutive_jumps = jumpnum
+
 func process_state():
 	if is_on_floor():
-		consecutive_jumps = 0
+		reset_jumps()
 
 func _physics_process(delta):
 	#print(consecutive_jumps)
