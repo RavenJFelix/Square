@@ -10,6 +10,8 @@ export var speed = 500
 export var max_jumps = 2
 export var speed_mult = 1.0
 
+export var health = 100
+
 var UP = Vector2(0,-1)
 var motion = Vector2(0, 0)
 var consecutive_jumps = 0
@@ -22,6 +24,18 @@ var mode = MODE.normal
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
+func die():
+	queue_free()
+
+func damage(damage):
+	assert(heal_amount > 0)
+	health -=damage
+	if health < 0:
+		die()
+
+func heal(heal_amount):
+	assert(heal_amount > 0)
+	health += heal_amount
 
 func suppress_max_jumps():
 	jump_buffer = max_jumps
