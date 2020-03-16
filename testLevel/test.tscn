@@ -15,3 +15,4 @@ position = Vector2( 81.4803, -27.7509 )
 
 [node name="HurtPlatform" parent="." instance=ExtResource( 3 )]
 position = Vector2( 405.02, 100.395 )
+regular_color = Color( 0.411765, 0, 0, 1 )
