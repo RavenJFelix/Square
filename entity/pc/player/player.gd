@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const GRAV = 20
-export var JUMP_POWER = 500
+export var JUMP_POWER = 470
 export var speed = 500
 export var max_jumps = 2
 var motion = Vector2(0, 0)
