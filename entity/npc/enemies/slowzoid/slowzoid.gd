@@ -1,14 +1,19 @@
 extends KinematicBody2D
+export var speed = 200
 
 var moving_right = false
 var motion = Vector2()
 var gravity = 20
-export var speed = 200
-
 var manager
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	manager = get_parent()
+
+func _physics_process(delta):
+	handle_state()
+	logical_motion()
+	#ambient_physics()
+	motion = move_and_slide(motion)
 
 func handle_state():
 	#print(get_position().x)
@@ -27,12 +32,6 @@ func logical_motion():
 func ambient_physics():
 	#motion.y += gravity
 	pass
-
-func _physics_process(delta):
-	handle_state()
-	logical_motion()
-	ambient_physics()
-	motion = move_and_slide(motion)
 
 func die():
 	manager.die()
