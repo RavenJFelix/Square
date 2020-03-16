@@ -1,7 +1,11 @@
 extends KinematicBody2D
 
+enum MODE {normal, climb}
+
 const GRAV = 20
-export var JUMP_POWER = 500
+export var climb_lat_speed = 100
+export var climb_speed = 300
+export var JUMP_POWER = 470
 export var speed = 500
 export var max_jumps = 2
 var motion = Vector2(0, 0)
@@ -10,7 +14,14 @@ var consecutive_jumps = 0
 export var speed_mult = 1.0
 var jump_buffer = 0
 var in_air = true
+var max_jump_buffered = false
+var mode = MODE.normal
 
+func mode_normal():
+	mode = MODE.normal
+
+func mode_climb():
+	mode = MODE.climb
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -18,9 +29,12 @@ func _ready():
 func suppress_max_jumps():
 	jump_buffer = max_jumps
 	max_jumps = 1
+	max_jump_buffered = true
 	#print("max jumps" + String(max_jumps) + String(jump_buffer))
 func restore_max_jumps():
-	max_jumps = jump_buffer
+	if max_jump_buffered:
+		max_jumps = jump_buffer
+		max_jump_buffered = false
 
 func get_motion():
 	return motion
@@ -46,7 +60,7 @@ func get_speed():
 	return speed
 
 #Checks for certain input events and executes code accordingly
-func check_and_exec():
+func check_and_exec_reg():
 	print(is_jumpable())
 	print(consecutive_jumps)
 	# Jumping Mechanics
@@ -57,9 +71,6 @@ func check_and_exec():
 		set_safe_margin(0.001)
 		in_air = 1
 		set_safe_margin(0.002)
-		
-
-	
 	# Lateral Motion
 	if Input.is_action_pressed("ui_left"):
 		motion.x = -speed * speed_mult
@@ -85,10 +96,39 @@ func process_state():
 func ambient_physical():
 	#Gravity Processing
 	motion.y += GRAV
-func _physics_process(delta):
-	#print(consecutive_jumps)
-	check_and_exec()
+
+func normal_mode():
+	check_and_exec_reg()
 	process_state()
 	ambient_physical()
 	motion = move_and_slide(motion, UP)
+
+func check_and_exec_climb():
+	# Vertical Motion
+	if Input.is_action_pressed("ui_up"):
+		motion.y = -climb_speed
+	elif Input.is_action_pressed("ui_down"):
+		motion.y = climb_speed
+	else:
+		motion.y = 0
+
+	# Lateral Motion
+	if Input.is_action_pressed("ui_left"):
+		motion.x = -climb_lat_speed
+	elif Input.is_action_pressed("ui_right"):
+		motion.x = climb_lat_speed
+	else:
+		motion.x = 0
+
+func climb_mode():
+	check_and_exec_climb()
+	motion = move_and_slide(motion, UP)
+
+func _physics_process(delta):
+	match (mode):
+		MODE.normal:
+			normal_mode()
+		MODE.climb:
+			climb_mode()
+
 

@@ -3,7 +3,7 @@
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=3]
-[ext_resource path="res://map/modifiers/slow-zone/SlowZone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://map/motion/ladder/ladder.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,14 +20,22 @@ position = Vector2( 422.789, 32.5277 )
 [node name="leftBound" parent="slowzoid" index="0"]
 position = Vector2( -818.506, -7.93335 )
 
-[node name="SlowZone" parent="." instance=ExtResource( 4 )]
-position = Vector2( 864.124, -25.7563 )
-scale = Vector2( 21.2963, 17.2629 )
-
 [node name="Polygon2D2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 660.78, 119.594 )
+position = Vector2( 717.843, 109.622 )
+scale = Vector2( 2.71744, 2.32963 )
+
+[node name="Polygon2D4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 762.165, 90.7853 )
+scale = Vector2( 2.71744, 2.32963 )
+
+[node name="Polygon2D5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 798.729, 66.4087 )
+scale = Vector2( 2.71744, 2.32963 )
 
 [node name="Polygon2D3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1066.03, 123.375 )
+
+[node name="ladder" parent="." instance=ExtResource( 4 )]
+position = Vector2( 864.79, -65.0207 )
 
 [editable path="slowzoid"]

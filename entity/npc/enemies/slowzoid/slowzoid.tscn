@@ -67,7 +67,7 @@ position = Vector2( 3.2261e-06, -9.3733 )
 rotation = 3.14159
 shape = SubResource( 2 )
 one_way_collision = true
-one_way_collision_margin = 128.0
+one_way_collision_margin = 0.0
 
 [node name="SlowZone" parent="slowzoidItself" instance=ExtResource( 3 )]
 script = SubResource( 4 )
