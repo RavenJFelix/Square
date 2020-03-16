@@ -38,3 +38,9 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+func die():
+	manager.die()
+
+func _on_DeathBox_body_entered(body):
+	if body.has_method("is_player"):
+		die()

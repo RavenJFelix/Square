@@ -16,3 +16,6 @@ func get_left_bound():
 
 func get_right_bound():
 	return rightBound.get_position().x
+
+func die():
+	queue_free()

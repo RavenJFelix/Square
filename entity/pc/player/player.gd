@@ -7,12 +7,19 @@ export var max_jumps = 2
 var motion = Vector2(0, 0)
 var UP = Vector2(0,-1)
 var consecutive_jumps = 0
+export var speed_mult = 1.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
 	pass
 
+func set_speed_mult(new_speed_mult):
+	speed_mult = new_speed_mult
+
+func get_speed_mult():
+	return speed_mult
+	
 func set_speed(new_speed):
 	speed = new_speed
 
@@ -28,9 +35,9 @@ func check_and_exec():
 	
 	# Lateral Motion
 	if Input.is_action_pressed("ui_left"):
-		motion.x = -speed
+		motion.x = -speed * speed_mult
 	elif Input.is_action_pressed("ui_right"):
-		motion.x = speed
+		motion.x = speed * speed_mult
 	else:
 		motion.x = 0
 
