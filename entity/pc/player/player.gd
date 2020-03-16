@@ -46,7 +46,7 @@ func _update_health_display(health):
 	gui.update_health(health)
 func suppress_max_jumps():
 	jump_buffer = max_jumps
-	max_jumps = 1
+	max_jumps = 0
 	max_jump_buffered = true
 	#print("max jumps" + String(max_jumps) + String(jump_buffer))
 func restore_max_jumps():
