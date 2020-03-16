@@ -21,22 +21,29 @@ var in_air = true
 var max_jump_buffered = false
 var mode = MODE.normal
 
+var gui
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	gui = get_node("PlayerGUI")
+	_update_health_display(health)
+	
 func die():
 	queue_free()
 
 func damage(damage):
-	assert(heal_amount > 0)
+	assert(damage  > 0)
 	health -=damage
+	_update_health_display(health)
 	if health < 0:
 		die()
 
 func heal(heal_amount):
 	assert(heal_amount > 0)
+	_update_health_display(health)
 	health += heal_amount
 
+func _update_health_display(health):
+	gui.update_health(health)
 func suppress_max_jumps():
 	jump_buffer = max_jumps
 	max_jumps = 1
