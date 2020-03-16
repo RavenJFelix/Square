@@ -8,14 +8,33 @@ var motion = Vector2(0, 0)
 var UP = Vector2(0,-1)
 var consecutive_jumps = 0
 export var speed_mult = 1.0
+var jump_buffer = 0
+var in_air = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	pass
 
+func suppress_max_jumps():
+	jump_buffer = max_jumps
+	max_jumps = 1
+	#print("max jumps" + String(max_jumps) + String(jump_buffer))
+func restore_max_jumps():
+	max_jumps = jump_buffer
+
+func get_motion():
+	return motion
 func set_speed_mult(new_speed_mult):
 	speed_mult = new_speed_mult
+
+func is_player():
+	pass
+	
+func is_moving_down():
+	if motion.y > 0:
+		return true
+	else:
+		return false
 
 func get_speed_mult():
 	return speed_mult
@@ -28,10 +47,18 @@ func get_speed():
 
 #Checks for certain input events and executes code accordingly
 func check_and_exec():
+	print(is_jumpable())
+	print(consecutive_jumps)
 	# Jumping Mechanics
 	if Input.is_action_just_pressed("ui_up") and is_jumpable():
+		
 		motion.y = -JUMP_POWER
 		consecutive_jumps += 1
+		set_safe_margin(0.001)
+		in_air = 1
+		set_safe_margin(0.002)
+		
+
 	
 	# Lateral Motion
 	if Input.is_action_pressed("ui_left"):
@@ -42,7 +69,8 @@ func check_and_exec():
 		motion.x = 0
 
 func is_jumpable():
-	if consecutive_jumps <= max_jumps:
+	if consecutive_jumps < max_jumps:
+		print("JUMP")
 		return true
 	else:
 		return false
@@ -51,7 +79,7 @@ func reset_jumps(jumpnum = 0):
 	consecutive_jumps = jumpnum
 
 func process_state():
-	if is_on_floor():
+	if is_on_floor() and in_air:
 		reset_jumps()
 
 func ambient_physical():

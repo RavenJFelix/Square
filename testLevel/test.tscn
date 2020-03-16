@@ -15,7 +15,7 @@ scale = Vector2( 119.918, 12.7383 )
 position = Vector2( 81.4803, -27.7509 )
 
 [node name="slowzoid" parent="." instance=ExtResource( 3 )]
-position = Vector2( 412.533, 86.61 )
+position = Vector2( 422.789, 32.5277 )
 
 [node name="SlowZone" parent="." instance=ExtResource( 4 )]
 position = Vector2( 864.124, -25.7563 )
