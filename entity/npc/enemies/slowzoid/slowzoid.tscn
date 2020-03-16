@@ -5,7 +5,7 @@
 [ext_resource path="res://map/modifiers/slow-zone/SlowZone.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 0.301617 )
+extents = Vector2( 6.38745, 0.301617 )
 
 [sub_resource type="GDScript" id=4]
 script/source = "extends Area2D
