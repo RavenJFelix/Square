@@ -54,5 +54,6 @@ func _physics_process(delta):
 	#print(consecutive_jumps)
 	check_and_exec()
 	process_state()
+	ambient_physical()
 	motion = move_and_slide(motion, UP)
 
