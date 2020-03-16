@@ -17,6 +17,9 @@ position = Vector2( 81.4803, -27.7509 )
 [node name="slowzoid" parent="." instance=ExtResource( 3 )]
 position = Vector2( 422.789, 32.5277 )
 
+[node name="leftBound" parent="slowzoid" index="0"]
+position = Vector2( -818.506, -7.93335 )
+
 [node name="SlowZone" parent="." instance=ExtResource( 4 )]
 position = Vector2( 864.124, -25.7563 )
 scale = Vector2( 21.2963, 17.2629 )
@@ -26,3 +29,5 @@ position = Vector2( 660.78, 119.594 )
 
 [node name="Polygon2D3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1066.03, 123.375 )
+
+[editable path="slowzoid"]
