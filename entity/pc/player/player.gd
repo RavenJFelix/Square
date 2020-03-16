@@ -86,7 +86,7 @@ func get_speed():
 
 func is_jumpable():
 	if consecutive_jumps < max_jumps:
-		print("JUMP")
+		#print("JUMP")
 		return true
 	else:
 		return false
@@ -106,8 +106,8 @@ func normal_mode():
 	motion = move_and_slide(motion, UP)
 #Checks for certain input events and executes code accordingly
 func check_and_exec_reg():
-	print(is_jumpable())
-	print(consecutive_jumps)
+	#print(is_jumpable())
+	#print(consecutive_jumps)
 	# Jumping Mechanics
 	if Input.is_action_just_pressed("ui_up") and is_jumpable():
 		
