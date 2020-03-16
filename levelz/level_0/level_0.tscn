@@ -11,3 +11,9 @@ scale = Vector2( 14.9383, 6.44737 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64.2994, 20.4222 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_rotation = 2.15352
+text = "Hello!"
