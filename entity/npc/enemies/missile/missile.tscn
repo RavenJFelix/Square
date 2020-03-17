@@ -20,4 +20,7 @@ polygon = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10, -10, -10 )
 rotation = -3.14159
 color = Color( 0.482353, 0.482353, 0.482353, 1 )
 polygon = PoolVector2Array( -9.60176, 10.3083, 0, 20, 10, 10, -10, 10 )
+
+[node name="Timer" type="Timer" parent="."]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
