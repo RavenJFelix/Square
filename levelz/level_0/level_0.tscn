@@ -1,19 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=3]
 [ext_resource path="res://map/motion/ladder/ladder.tscn" type="PackedScene" id=4]
+[ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 154.179, 129.228 )
 scale = Vector2( 14.9383, 6.44737 )
-
-[node name="StaticBody2D2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 531.565, 132.036 )
-scale = Vector2( 10.0933, 3.64487 )
 
 [node name="StaticBody2D3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2134.97, 236.927 )
@@ -123,7 +120,9 @@ margin_right = 961.856
 margin_bottom = -24.3226
 rect_rotation = 6.40926
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "You can doulbe-jump!"
+text = "These damage you periodically
+
+You can also double-jump"
 
 [node name="slowzoidMan" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1542.34, 59.588 )
@@ -153,6 +152,10 @@ position = Vector2( 19.0403, 9.52002 )
 
 [node name="Polygon2D" parent="slowzoidMan2/slowzoidItself" index="0"]
 color = Color( 0, 0, 0, 0.556863 )
+
+[node name="HurtPlatform" parent="." instance=ExtResource( 5 )]
+position = Vector2( 637.179, 204.808 )
+scale = Vector2( 19.9962, 6.60786 )
 
 [editable path="slowzoidMan"]
 
