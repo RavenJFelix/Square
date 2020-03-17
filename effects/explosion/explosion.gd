@@ -27,10 +27,7 @@ func general_update():
 	update()
 
 func _physics_process(delta):
-	var bodies_in_area = get_overlapping_bodies()
-	for body in bodies_in_area:
-		if body.has_method("damage"):
-			body.damage(damage)
+
 	current_color = lerp(current_color, target_color, color_change_speed)
 	radius += growth_rate
 	update_collision_radius()
