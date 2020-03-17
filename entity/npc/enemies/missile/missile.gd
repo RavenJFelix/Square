@@ -1,5 +1,5 @@
 extends KinematicBody2D
-enum MODE {chase, search}
+var explosion = load("res://effects/simple-explosion/simple-explosion.tscn")
 var vel = Vector2()
 var start_speed = 100
 # Declare member variables here. Examples:
@@ -15,3 +15,12 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func _explode():
+	var boom = explosion.instance()
+	get_parent().add_child(boom)
+	boom.global_position = global_position
+	queue_free()
+
+func _on_Area2D_body_entered(body):
+	_explode()
