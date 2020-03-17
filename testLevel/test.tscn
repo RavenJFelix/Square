@@ -18,4 +18,4 @@ position = Vector2( 85.9928, 89.5736 )
 position = Vector2( 256.881, 72.0368 )
 
 [node name="Chaser" parent="." instance=ExtResource( 4 )]
-position = Vector2( 162.953, 61.7683 )
+position = Vector2( -50.7367, -74.4067 )

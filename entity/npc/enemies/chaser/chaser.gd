@@ -1,12 +1,23 @@
 extends KinematicBody2D
 enum MODE {search, chase}
 enum MOVE_MODE {x,y}
+enum DIRECTION {up, down, left, right}
 var explosion = load("res://effects/simple-explosion/simple-explosion.tscn")
 var vel = Vector2()
-export var start_speed = 100
+export var speed = 100
 export var timeout = 10
 var target_mode = MOVE_MODE.x
 var mode = MODE.search
+
+var UP = Vector2(0,-speed)
+var DOWN = Vector2(0,speed)
+var LEFT = Vector2(-speed,0)
+var RIGHT = Vector2(speed, 0)
+var current_direction = DIRECTION.left
+var rotUp = 0
+var rotDown = 90
+var rotLeft = 180
+var rotRight = 270
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,9 +25,10 @@ var target = NodePath()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Timer.start(timeout)
-	vel = Vector2(0, -start_speed).rotated(rotation)
+	vel = Vector2(0, -speed).rotated(rotation)
 
 func _physics_process(delta):
+	print(target)
 	match mode:
 		MODE.chase:
 			_chase()
@@ -26,13 +38,51 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 func _chase():
-	print("CHASING")
+	
+	match target_mode:
+		MOVE_MODE.x:
+			_chase_x()
+		MOVE_MODE.y:
+			_chase_y()
+
+func _chase_x():
+	if (position.x < target.position.x):
+		if current_direction == DIRECTION.left:
+			target_mode = MOVE_MODE.y
+		else:
+			vel = RIGHT
+			rotation_degrees = rotRight
+			current_direction = DIRECTION.right
+	elif target.position.x < position.x:
+		if current_direction == DIRECTION.right:
+			target_mode = MOVE_MODE.y
+		else:
+			vel = LEFT
+			rotation_degrees = rotLeft
+			current_direction = DIRECTION.left
+func _chase_y():
+	if (position.y < target.position.y):
+		if current_direction == DIRECTION.up:
+			target_mode = MOVE_MODE.x
+		else:
+			vel = DOWN
+			rotation_degrees = rotDown
+			current_direction = DIRECTION.down
+	elif target.position.y < position.y:
+		if current_direction == DIRECTION.down:
+			target_mode = MOVE_MODE.y
+		else:
+			vel = UP
+			rotation_degrees = rotUp
+			current_direction = DIRECTION.up
+
 func _search():
 	print("SEARCHING")
 	var bodies = $TargetArea.get_overlapping_bodies()
 	for body in bodies:
 		if body.has_method("is_player"):
 			target = body
+			body
 			mode = MODE.chase
 
 func _explode():
