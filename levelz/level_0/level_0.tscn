@@ -125,7 +125,7 @@ text = "These damage you periodically
 You can also double-jump"
 
 [node name="slowzoidMan" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1542.34, 59.588 )
+position = Vector2( 1539.64, -37.5991 )
 
 [node name="rightBound" parent="slowzoidMan" index="1"]
 position = Vector2( 377.535, 4.43213 )
