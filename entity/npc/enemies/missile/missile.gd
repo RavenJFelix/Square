@@ -2,6 +2,7 @@ extends KinematicBody2D
 var explosion = load("res://effects/simple-explosion/simple-explosion.tscn")
 var vel = Vector2()
 var start_speed = 100
+var timeout = 60
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
