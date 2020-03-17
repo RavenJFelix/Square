@@ -61,7 +61,6 @@ position = Vector2( 637.179, 204.808 )
 scale = Vector2( 19.9962, 6.60786 )
 
 [node name="SlowzoidsandMinez" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="StaticBody2D3" parent="SlowzoidsandMinez" instance=ExtResource( 3 )]
 position = Vector2( 2134.97, 236.927 )
@@ -115,7 +114,6 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "These are mines, they explode."
 
 [node name="Slowzoid_Finale" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="StaticBody2D8" parent="Slowzoid_Finale" instance=ExtResource( 3 )]
 position = Vector2( 3669.02, -191.55 )
@@ -162,6 +160,15 @@ If you do not know how to use it. You are not a true gamer
 (Don't worry, it consents.)
 
 Climb up."
+
+[node name="Intro8" type="Label" parent="Slowzoid_Finale"]
+margin_left = 3753.91
+margin_top = -558.401
+margin_right = 4227.91
+margin_bottom = -442.402
+rect_rotation = 10.2007
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Climb this ridiculously large ladder."
 
 [node name="Intro7" type="Label" parent="Slowzoid_Finale"]
 margin_left = 2472.91
