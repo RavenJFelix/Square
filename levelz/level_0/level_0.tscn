@@ -8,6 +8,7 @@
 [ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
+editor/display_folded = true
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 154.179, 129.228 )
@@ -62,10 +63,10 @@ stuck falling into an eternal void...
 Yeah. Welcome to alpha testing."
 
 [node name="Intro3" type="Label" parent="."]
-margin_left = 895.862
-margin_top = 44.6375
-margin_right = 1331.86
-margin_bottom = 160.637
+margin_left = 908.359
+margin_top = -70.0372
+margin_right = 1344.36
+margin_bottom = 45.9628
 rect_rotation = -2.47876
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Watch out for Slow-zoids! They will slow you down.
@@ -74,7 +75,9 @@ You can only kill them by directly jumping on top of them
 I've extended the idea where it inhbiits jumping so you cannot
 just jump up :)
 
-Keep moving forward to find higher ground! Slowzoids do no damage"
+Keep moving forward to find higher ground! Slowzoids do no damage
+
+The yello mines do though."
 
 [node name="Intro5" type="Label" parent="."]
 margin_left = 1928.31
@@ -100,19 +103,23 @@ If you do not know how to use it. You are not a true gamer
 Climb up."
 
 [node name="Intro7" type="Label" parent="."]
-margin_left = 2463.91
-margin_top = -344.558
-margin_right = 2937.91
-margin_bottom = -228.558
+margin_left = 2472.91
+margin_top = -402.558
+margin_right = 2946.91
+margin_bottom = -252.558
 rect_rotation = -1.96505
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Kill the slowzoid. Use your nonexistent brain.
 
 There is nothing to do afterwards.
 
+
+
 Good Job. 
 
-Now actually kill it because that was a waste of typing if you didn't"
+Now actually kill it because that was a waste of typing if you didn't
+
+>>>>>>>>>>>>>>>There's a ladder on the far right ->"
 
 [node name="Intro4" type="Label" parent="."]
 margin_left = 561.856
@@ -163,11 +170,14 @@ position = Vector2( 2646.89, 11.8719 )
 scale = Vector2( 1, 22.7726 )
 
 [node name="ladder2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2934.98, -437.173 )
+position = Vector2( 4148.16, -449.09 )
 scale = Vector2( 1, 22.7726 )
 
 [node name="slowzoidMan2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3207.11, -312.688 )
+
+[node name="rightBound" parent="slowzoidMan2" index="1"]
+position = Vector2( 989.166, 1.29236 )
 
 [node name="slowzoidItself" parent="slowzoidMan2" index="2"]
 position = Vector2( 19.0403, 9.52002 )
@@ -178,6 +188,27 @@ color = Color( 0, 0, 0, 0.556863 )
 [node name="HurtPlatform" parent="." instance=ExtResource( 6 )]
 position = Vector2( 637.179, 204.808 )
 scale = Vector2( 19.9962, 6.60786 )
+
+[node name="HurtPlatform9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2970.26, -225.953 )
+scale = Vector2( 4.53279, 1.64263 )
+
+[node name="HurtPlatform10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3268.37, -229.212 )
+scale = Vector2( 4.53279, 1.64263 )
+
+[node name="HurtPlatform11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3616.98, -228.397 )
+scale = Vector2( 4.53279, 1.64263 )
+
+[node name="BasicMine" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3113.23, -224.503 )
+
+[node name="BasicMine2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3439.89, -228.79 )
+
+[node name="BasicMine3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3762.26, -223.646 )
 
 [editable path="slowzoidMan"]
 
