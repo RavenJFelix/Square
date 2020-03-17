@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://map/hazard/basic-mine/basic-mine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entity/npc/enemies/chaser/chaser.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,3 +22,7 @@ position = Vector2( 174.173, 96.3657 )
 
 [node name="BasicMine3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 309.547, 89.1457 )
+
+[node name="Chaser" parent="." instance=ExtResource( 4 )]
+position = Vector2( 205.76, 78.3153 )
+rotation = 0.734214
