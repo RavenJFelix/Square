@@ -51,7 +51,7 @@ position = Vector2( -260, 0 )
 position = Vector2( 290, 0 )
 
 [node name="slowzoidItself" type="KinematicBody2D" parent="."]
-scale = Vector2( 9.45349, 25.2239 )
+scale = Vector2( 10.6781, 19.2042 )
 script = ExtResource( 2 )
 
 [node name="Polygon2D" type="Polygon2D" parent="slowzoidItself"]
