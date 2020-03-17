@@ -128,7 +128,7 @@ position = Vector2( 4148.16, -717.691 )
 scale = Vector2( 1, 49.6327 )
 
 [node name="slowzoidMan2" parent="Slowzoid_Finale" instance=ExtResource( 6 )]
-position = Vector2( 3174.3, -409.064 )
+position = Vector2( 3175.47, -396.234 )
 
 [node name="HurtPlatform10" parent="Slowzoid_Finale" instance=ExtResource( 4 )]
 position = Vector2( 3268.37, -229.212 )
