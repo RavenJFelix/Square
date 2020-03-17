@@ -1,9 +1,10 @@
 extends Area2D
 var damage_done = false
 export var damage = 10
+export var extinguish_time = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Timer.start(1)
+	$Timer.start(extinguish_time)
 	pass # Replace with function body.
 func _physics_process(delta):
 	if not damage_done:
@@ -12,6 +13,7 @@ func _physics_process(delta):
 			if body.has_method("damage"):
 				body.damage(damage)
 				damage_done = true
+	$Polygon2D.color.a = ($Timer.time_left / extinguish_time)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
