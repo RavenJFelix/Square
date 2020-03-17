@@ -11,7 +11,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4690.69, -1981.41 )
+position = Vector2( 156.471, 23.3995 )
 
 [node name="ladder" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2646.89, 11.8719 )
