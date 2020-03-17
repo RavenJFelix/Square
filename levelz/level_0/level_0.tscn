@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=3]
-[ext_resource path="res://map/motion/ladder/ladder.tscn" type="PackedScene" id=4]
-[ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=5]
+[ext_resource path="res://map/hazard/basic-mine/basic-mine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=4]
+[ext_resource path="res://map/motion/ladder/ladder.tscn" type="PackedScene" id=5]
+[ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -124,7 +125,28 @@ text = "These damage you periodically
 
 You can also double-jump"
 
-[node name="slowzoidMan" parent="." instance=ExtResource( 3 )]
+[node name="HurtPlatform2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1313.74, 188.47 )
+
+[node name="HurtPlatform3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1365.42, 190.361 )
+
+[node name="HurtPlatform4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1423.4, 191.622 )
+
+[node name="HurtPlatform5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1577.18, 190.991 )
+
+[node name="HurtPlatform6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1674.24, 189.101 )
+
+[node name="HurtPlatform7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1742.31, 177.126 )
+
+[node name="HurtPlatform8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1828.02, 185.949 )
+
+[node name="slowzoidMan" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1539.64, -37.5991 )
 
 [node name="rightBound" parent="slowzoidMan" index="1"]
@@ -136,15 +158,15 @@ position = Vector2( 19.9446, 49.8615 )
 [node name="Polygon2D" parent="slowzoidMan/slowzoidItself" index="0"]
 color = Color( 0, 0, 0, 0.556863 )
 
-[node name="ladder" parent="." instance=ExtResource( 4 )]
+[node name="ladder" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2646.89, 11.8719 )
 scale = Vector2( 1, 22.7726 )
 
-[node name="ladder2" parent="." instance=ExtResource( 4 )]
+[node name="ladder2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2934.98, -437.173 )
 scale = Vector2( 1, 22.7726 )
 
-[node name="slowzoidMan2" parent="." instance=ExtResource( 3 )]
+[node name="slowzoidMan2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3207.11, -312.688 )
 
 [node name="slowzoidItself" parent="slowzoidMan2" index="2"]
@@ -153,7 +175,7 @@ position = Vector2( 19.0403, 9.52002 )
 [node name="Polygon2D" parent="slowzoidMan2/slowzoidItself" index="0"]
 color = Color( 0, 0, 0, 0.556863 )
 
-[node name="HurtPlatform" parent="." instance=ExtResource( 5 )]
+[node name="HurtPlatform" parent="." instance=ExtResource( 6 )]
 position = Vector2( 637.179, 204.808 )
 scale = Vector2( 19.9962, 6.60786 )
 
