@@ -11,7 +11,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64.2994, 20.4222 )
+position = Vector2( 4690.69, -1981.41 )
 
 [node name="ladder" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2646.89, 11.8719 )
@@ -226,91 +226,98 @@ scale = Vector2( 108.206, 1 )
 position = Vector2( 6063.34, -1553.69 )
 scale = Vector2( 1, 34.8343 )
 
-[node name="Chasers" type="Node2D" parent="."]
+[node name="Chasers2" type="Node2D" parent="."]
 
-[node name="Polygon2D" parent="Chasers" instance=ExtResource( 3 )]
+[node name="Polygon2D" parent="Chasers2" instance=ExtResource( 3 )]
 position = Vector2( 5232.39, -1865.33 )
 scale = Vector2( 82.9826, 2.75809 )
 
-[node name="missile-shooter" parent="Chasers" instance=ExtResource( 7 )]
-position = Vector2( 5316.04, -2561.45 )
+[node name="missile-shooter" parent="Chasers2" instance=ExtResource( 7 )]
+position = Vector2( 6135.92, -2558.6 )
 rotation = -1.57079
 missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
 
-[node name="MissileSpawn" parent="Chasers/missile-shooter" index="3"]
-rotation = 0.0
+[node name="missile-shooter3" parent="Chasers2" instance=ExtResource( 7 )]
+position = Vector2( 5138.3, -2554.44 )
+rotation = -1.57079
+missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
 
-[node name="HurtPlatform" parent="Chasers" instance=ExtResource( 4 )]
+[node name="missile-shooter2" parent="Chasers2" instance=ExtResource( 7 )]
+position = Vector2( 7041.24, -2546.93 )
+rotation = -1.57079
+missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
+
+[node name="HurtPlatform" parent="Chasers2" instance=ExtResource( 4 )]
 position = Vector2( 5539.77, -1917.42 )
 scale = Vector2( 2.65745, 2.71884 )
 
-[node name="HurtPlatform2" parent="Chasers" instance=ExtResource( 4 )]
+[node name="HurtPlatform2" parent="Chasers2" instance=ExtResource( 4 )]
 position = Vector2( 5372.8, -1914.96 )
 scale = Vector2( 2.65745, 2.71884 )
 
-[node name="HurtPlatform3" parent="Chasers" instance=ExtResource( 4 )]
+[node name="HurtPlatform3" parent="Chasers2" instance=ExtResource( 4 )]
 position = Vector2( 5425.59, -1918.65 )
 scale = Vector2( 2.65745, 2.71884 )
 
-[node name="HurtPlatform4" parent="Chasers" instance=ExtResource( 4 )]
+[node name="HurtPlatform4" parent="Chasers2" instance=ExtResource( 4 )]
 position = Vector2( 5483.29, -1916.19 )
 scale = Vector2( 2.65745, 2.71884 )
 
-[node name="HurtPlatform5" parent="Chasers" instance=ExtResource( 4 )]
+[node name="HurtPlatform5" parent="Chasers2" instance=ExtResource( 4 )]
 position = Vector2( 5207.05, -1912.51 )
 scale = Vector2( 2.65745, 2.71884 )
 
-[node name="HurtPlatform6" parent="Chasers" instance=ExtResource( 4 )]
+[node name="HurtPlatform6" parent="Chasers2" instance=ExtResource( 4 )]
 position = Vector2( 5075.68, -1918.65 )
 scale = Vector2( 2.65745, 2.71884 )
 
-[node name="HurtPlatform7" parent="Chasers" instance=ExtResource( 4 )]
+[node name="HurtPlatform7" parent="Chasers2" instance=ExtResource( 4 )]
 position = Vector2( 4930.12, -1917.29 )
 scale = Vector2( 2.65745, 2.71884 )
 
-[node name="BasicMine" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 4765.45, -1970.78 )
 
-[node name="BasicMine10" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine10" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 4485.45, -2038.15 )
 
-[node name="BasicMine11" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine11" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 4218.08, -2173.94 )
 
-[node name="BasicMine12" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine12" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 4443.34, -2264.46 )
 
-[node name="BasicMine13" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine13" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 4198.08, -2500.25 )
 
-[node name="BasicMine14" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine14" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 4528.11, -2657.33 )
 
-[node name="BasicMine2" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine2" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 4867.26, -2010.69 )
 
-[node name="BasicMine3" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine3" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 4929.16, -2023.72 )
 
-[node name="BasicMine4" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine4" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 5118.13, -2135.31 )
 
-[node name="BasicMine5" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine5" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 5142.57, -2047.34 )
 
-[node name="BasicMine6" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine6" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 5245.19, -1958.56 )
 
-[node name="BasicMine7" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine7" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 5326.65, -2070.15 )
 
-[node name="BasicMine8" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine8" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 5445.56, -1976.48 )
 
-[node name="BasicMine9" parent="Chasers" instance=ExtResource( 5 )]
+[node name="BasicMine9" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 5484.66, -2120.65 )
 
-[node name="Intro10" type="Label" parent="Chasers"]
+[node name="Intro10" type="Label" parent="Chasers2"]
 margin_left = 5677.6
 margin_top = -2034.47
 margin_right = 6151.6
@@ -323,7 +330,7 @@ They can chase you.
 
 Run.."
 
-[node name="Intro11" type="Label" parent="Chasers"]
+[node name="Intro11" type="Label" parent="Chasers2"]
 margin_left = 4602.91
 margin_top = -2629.75
 margin_right = 5076.91
@@ -332,34 +339,120 @@ rect_rotation = 0.45296
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Remember to run."
 
-[node name="Polygon2D2" parent="Chasers" instance=ExtResource( 3 )]
-position = Vector2( 5328.35, -2455.51 )
-scale = Vector2( 78.716, 7.97189 )
+[node name="Intro12" type="Label" parent="Chasers2"]
+margin_left = 4718.62
+margin_top = -2708.64
+margin_right = 5192.62
+margin_bottom = -2524.64
+rect_rotation = 0.45296
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Shit."
 
-[node name="Polygon2D3" parent="Chasers" instance=ExtResource( 3 )]
+[node name="Intro13" type="Label" parent="Chasers2"]
+margin_left = 5358.62
+margin_top = -2732.85
+margin_right = 5832.62
+margin_bottom = -2548.85
+rect_rotation = -9.06752
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Shit shit shit;"
+
+[node name="Intro14" type="Label" parent="Chasers2"]
+margin_left = 6315.38
+margin_top = -2712.23
+margin_right = 6789.38
+margin_bottom = -2528.23
+rect_rotation = 0.686365
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fuck oh fuck oh please no."
+
+[node name="Intro15" type="Label" parent="Chasers2"]
+margin_left = 7470.45
+margin_top = -2675.31
+margin_right = 7944.45
+margin_bottom = -2491.31
+rect_rotation = 0.686365
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You won!!!"
+
+[node name="Polygon2D2" parent="Chasers2" instance=ExtResource( 3 )]
+position = Vector2( 6100.55, -2455.51 )
+scale = Vector2( 155.936, 7.97189 )
+polygon = PoolVector2Array( -10, -10, 10, -10, 10, -1.02016, 10, 10, -10, 10, -10, -10 )
+
+[node name="Polygon2D3" parent="Chasers2" instance=ExtResource( 3 )]
 position = Vector2( 4471.36, -1929.52 )
 scale = Vector2( 7.05, 3.40001 )
 
-[node name="Polygon2D4" parent="Chasers" instance=ExtResource( 3 )]
+[node name="Polygon2D4" parent="Chasers2" instance=ExtResource( 3 )]
 position = Vector2( 4334.36, -1990.52 )
 scale = Vector2( 7.05, 3.40001 )
 
-[node name="Polygon2D5" parent="Chasers" instance=ExtResource( 3 )]
+[node name="Polygon2D5" parent="Chasers2" instance=ExtResource( 3 )]
 position = Vector2( 4200.36, -2058.52 )
 scale = Vector2( 7.05, 3.40001 )
 
-[node name="Polygon2D6" parent="Chasers" instance=ExtResource( 3 )]
+[node name="Polygon2D6" parent="Chasers2" instance=ExtResource( 3 )]
 position = Vector2( 4420.36, -2173.52 )
 scale = Vector2( 7.05, 3.40001 )
 
-[node name="Polygon2D7" parent="Chasers" instance=ExtResource( 3 )]
+[node name="Polygon2D7" parent="Chasers2" instance=ExtResource( 3 )]
 position = Vector2( 4250.36, -2330.52 )
 scale = Vector2( 7.05, 3.40001 )
 
-[node name="Polygon2D8" parent="Chasers" instance=ExtResource( 3 )]
+[node name="Polygon2D8" parent="Chasers2" instance=ExtResource( 3 )]
 position = Vector2( 4452.47, -2432.63 )
 scale = Vector2( 7.05, 3.40001 )
 
-[editable path="Missilez/missile-shooter"]
+[node name="HurtPlatform8" parent="Chasers2" instance=ExtResource( 4 )]
+position = Vector2( 5562.57, -2549.47 )
+rotation = -1.57079
+scale = Vector2( 1.76442, 4.26621 )
 
-[editable path="Chasers/missile-shooter"]
+[node name="HurtPlatform10" parent="Chasers2" instance=ExtResource( 4 )]
+position = Vector2( 5562.57, -2549.47 )
+rotation = -1.57079
+scale = Vector2( 1.76442, 4.26621 )
+polygon = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10, -9.99998, 2.07025, -10, -10 )
+
+[node name="HurtPlatform9" parent="Chasers2" instance=ExtResource( 4 )]
+position = Vector2( 5304.2, -2547.42 )
+rotation = -1.57079
+scale = Vector2( 1.76442, 4.26621 )
+
+[node name="HurtPlatform11" parent="Chasers2" instance=ExtResource( 4 )]
+position = Vector2( 5870.15, -2545.37 )
+rotation = -1.57079
+scale = Vector2( 1.76442, 4.26621 )
+
+[node name="HurtPlatform12" parent="Chasers2" instance=ExtResource( 4 )]
+position = Vector2( 6462.66, -2541.87 )
+rotation = -1.57079
+scale = Vector2( 1.76442, 4.26621 )
+
+[node name="BasicMine16" parent="Chasers2" instance=ExtResource( 5 )]
+position = Vector2( 6523.21, -2560.91 )
+
+[node name="BasicMine18" parent="Chasers2" instance=ExtResource( 5 )]
+position = Vector2( 6240.11, -2584.66 )
+
+[node name="BasicMine19" parent="Chasers2" instance=ExtResource( 5 )]
+position = Vector2( 6291.41, -2723.36 )
+
+[node name="BasicMine20" parent="Chasers2" instance=ExtResource( 5 )]
+position = Vector2( 6646.71, -2680.61 )
+
+[node name="BasicMine21" parent="Chasers2" instance=ExtResource( 5 )]
+position = Vector2( 6514.66, -2723.36 )
+
+[node name="BasicMine22" parent="Chasers2" instance=ExtResource( 5 )]
+position = Vector2( 6854.76, -2555.21 )
+
+[node name="BasicMine23" parent="Chasers2" instance=ExtResource( 5 )]
+position = Vector2( 6856.66, -2663.51 )
+
+[node name="Polygon2D9" parent="Chasers2" instance=ExtResource( 3 )]
+position = Vector2( 7276.23, -2616.09 )
+scale = Vector2( 1, 9.20211 )
+
+[editable path="Missilez/missile-shooter"]
