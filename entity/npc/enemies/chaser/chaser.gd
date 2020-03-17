@@ -4,7 +4,7 @@ enum MOVE_MODE {x,y}
 enum DIRECTION {up, down, left, right}
 var explosion = load("res://effects/simple-explosion/simple-explosion.tscn")
 var vel = Vector2()
-export var speed = 100
+export var speed = 300
 export var timeout = 10
 var target_mode = MOVE_MODE.x
 var mode = MODE.search
@@ -24,6 +24,10 @@ var rotRight = 90
 var target = NodePath()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if rand_range(0, 1) < 0.5:
+		target_mode = MOVE_MODE.x
+	else:
+		target_mode = MOVE_MODE.y
 	$Timer.start(timeout)
 	vel = Vector2(0, -speed).rotated(rotation)
 	
