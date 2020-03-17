@@ -89,7 +89,7 @@ func _search():
 
 func _explode():
 	var boom = explosion.instance()
-	get_parent().add_child(boom)
+	get_parent().call_deferred("add_child", boom)
 	boom.global_position = global_position
 	queue_free()
 
