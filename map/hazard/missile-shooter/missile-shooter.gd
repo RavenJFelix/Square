@@ -6,6 +6,7 @@ var missile = load(missile_scene)
 # var b = "text"
 export var shoot_interval = 0.5
 export var missile_speed = 500
+export var missile_timout = 10
 var active = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,6 +19,7 @@ func _shoot():
 	le_missile.global_position = $MissileSpawn.global_position
 	le_missile.rotation = $MissileSpawn.rotation
 	le_missile.start_speed = missile_speed
+	le_missile.timeout = missile_timout
 	get_parent().call_deferred("add_child", le_missile)
 
 	
