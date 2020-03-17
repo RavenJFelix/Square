@@ -5,7 +5,7 @@ enum MODE {normal, climb}
 const GRAV = 20
 export var climb_lat_speed = 100
 export var climb_speed = 300
-export var JUMP_POWER = 500
+export var JUMP_POWER = 600
 export var speed = 500
 export var max_jumps = 1
 export var speed_mult = 1.0
