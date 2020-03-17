@@ -2,8 +2,8 @@ extends Area2D
 
 enum MODE {end_color, fade}
 export var damage = .5
-export var color_change_speed = 0.05
-export var growth_rate = 1
+export var color_change_speed = 0.1
+export var growth_rate = 3
 export var start_color = Color()
 export var end_color = Color()
 var current_color = Color()
@@ -41,7 +41,8 @@ func _physics_process(delta):
 				target_color = Color(target_color.r, target_color.g, target_color.b, 0)
 				mode = MODE.fade
 			MODE.fade:
-				queue_free()
+				if (colors_are_equal(current_color, target_color, 0.1)):
+					queue_free()
 
 
 func colors_are_equal(color1, color2, epsilon):
