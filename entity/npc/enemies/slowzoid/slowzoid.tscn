@@ -4,10 +4,10 @@
 [ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.gd" type="Script" id=2]
 [ext_resource path="res://map/modifiers/slow-zone/SlowZone.tscn" type="PackedScene" id=3]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 6.38745, 0.301617 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.15478, 0.301617 )
 
-[sub_resource type="GDScript" id=4]
+[sub_resource type="GDScript" id=2]
 script/source = "extends Area2D
 export var slowdown_ratio = 0.5
 # Declare member variables here. Examples:
@@ -65,12 +65,12 @@ polygon = PoolVector2Array( 9.49659, -9.97372, 19.8438, 11.2641, -21.545, 11.264
 [node name="DeathCol" type="CollisionShape2D" parent="slowzoidItself/DeathBox"]
 position = Vector2( 3.2261e-06, -9.3733 )
 rotation = 3.14159
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 one_way_collision = true
 one_way_collision_margin = 0.0
 
 [node name="SlowZone" parent="slowzoidItself" instance=ExtResource( 3 )]
-script = SubResource( 4 )
+script = SubResource( 2 )
 slowdown_ratio = 0.25
 
 [node name="CollisionShape2D" parent="slowzoidItself/SlowZone" index="0"]
