@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://map/motion/ladder/ladder.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=4]
 [ext_resource path="res://map/hazard/basic-mine/basic-mine.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=6]
+[ext_resource path="res://map/hazard/missile-shooter/missile-shooter.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -70,14 +71,6 @@ scale = Vector2( 109.194, 3.64487 )
 position = Vector2( 2379.92, 187.861 )
 scale = Vector2( 7.95346, 2.0697 )
 
-[node name="StaticBody2D5" parent="SlowzoidsandMinez" instance=ExtResource( 3 )]
-position = Vector2( 2162.37, 96.6607 )
-scale = Vector2( 7.95346, 2.0697 )
-
-[node name="StaticBody2D6" parent="SlowzoidsandMinez" instance=ExtResource( 3 )]
-position = Vector2( 1984.72, -12.5893 )
-scale = Vector2( 7.95346, 2.0697 )
-
 [node name="StaticBody2D7" parent="SlowzoidsandMinez" instance=ExtResource( 3 )]
 position = Vector2( 1802.32, -120.889 )
 scale = Vector2( 7.95346, 2.0697 )
@@ -112,42 +105,32 @@ position = Vector2( 1742.31, 177.126 )
 [node name="HurtPlatform8" parent="SlowzoidsandMinez" instance=ExtResource( 5 )]
 position = Vector2( 1828.02, 185.949 )
 
-[node name="slowzoidMan" parent="SlowzoidsandMinez" instance=ExtResource( 6 )]
-position = Vector2( 1539.64, -37.5991 )
-
 [node name="Intro3" type="Label" parent="SlowzoidsandMinez"]
-margin_left = 908.359
-margin_top = -70.0372
-margin_right = 1344.36
-margin_bottom = 79.9628
+margin_left = 1120.97
+margin_top = 158.445
+margin_right = 1556.97
+margin_bottom = 308.445
 rect_rotation = -2.47876
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Watch out for Slow-zoids! They will slow you down.
-You can only kill them by directly jumping on top of them
-(Idea:Matthew Fulford)
-I've extended the idea where it inhbiits jumping so you cannot
-just jump up :)
-
-Keep moving forward to find higher ground! Slowzoids do no damage
-
-The yello mines do though."
+text = "These are mines, they explode."
 
 [node name="Slowzoid_Finale" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="StaticBody2D8" parent="Slowzoid_Finale" instance=ExtResource( 3 )]
 position = Vector2( 3669.02, -191.55 )
 scale = Vector2( 100.504, 2.0697 )
 
 [node name="ladder2" parent="Slowzoid_Finale" instance=ExtResource( 2 )]
-position = Vector2( 4148.16, -449.09 )
-scale = Vector2( 1, 22.7726 )
+position = Vector2( 4148.16, -717.691 )
+scale = Vector2( 1, 49.6327 )
+
+[node name="ladder3" parent="Slowzoid_Finale" instance=ExtResource( 2 )]
+position = Vector2( 4148.16, -717.691 )
+scale = Vector2( 1, 49.6327 )
 
 [node name="slowzoidMan2" parent="Slowzoid_Finale" instance=ExtResource( 6 )]
 position = Vector2( 3174.3, -409.064 )
-
-[node name="HurtPlatform9" parent="Slowzoid_Finale" instance=ExtResource( 4 )]
-position = Vector2( 2970.26, -225.953 )
-scale = Vector2( 4.53279, 1.64263 )
 
 [node name="HurtPlatform10" parent="Slowzoid_Finale" instance=ExtResource( 4 )]
 position = Vector2( 3268.37, -229.212 )
@@ -187,14 +170,189 @@ margin_right = 2946.91
 margin_bottom = -218.558
 rect_rotation = -1.96505
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Kill the slowzoid. Use your nonexistent brain.
+text = "Slowoids slow you down and prevent jumping. They do not hurt you. 
 
-There is nothing to do afterwards.
+If you can climb high enough, you can kill them.
 
+Just because they don't do damage doesn't make they are a concern."
 
+[node name="Missilez" type="Node2D" parent="."]
 
-Good Job. 
+[node name="Polygon2D2" parent="Missilez" instance=ExtResource( 3 )]
+position = Vector2( 4816.08, -1259.38 )
+scale = Vector2( 1, 5.0302 )
 
-Now actually kill it because that was a waste of typing if you didn't
+[node name="missile-shooter" parent="Missilez" instance=ExtResource( 7 )]
+position = Vector2( 5808.6, -1230.54 )
+rotation = 3.14159
 
->>>>>>>>>>>>>>>There's a ladder on the far right ->"
+[node name="MissileSpawn" parent="Missilez/missile-shooter" index="3"]
+rotation = 4.71239
+
+[node name="Intro8" type="Label" parent="Missilez"]
+margin_left = 4167.92
+margin_top = -1272.67
+margin_right = 4641.92
+margin_bottom = -1088.67
+rect_rotation = 0.45296
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "There are Missiles that explode. Dodge them and climb the ladder"
+
+[node name="Intro9" type="Label" parent="Missilez"]
+margin_left = 5072.93
+margin_top = -1425.89
+margin_right = 5546.93
+margin_bottom = -1241.89
+rect_rotation = 0.45296
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SO MANY AHHHHH!!!!"
+
+[node name="ladder4" parent="Missilez" instance=ExtResource( 2 )]
+position = Vector2( 4148.16, -717.691 )
+scale = Vector2( 1, 49.6327 )
+
+[node name="Polygon2D" parent="Missilez" instance=ExtResource( 3 )]
+position = Vector2( 5245.77, -1197.49 )
+scale = Vector2( 108.206, 1 )
+
+[node name="ladder" parent="Missilez" instance=ExtResource( 2 )]
+position = Vector2( 6063.34, -1553.69 )
+scale = Vector2( 1, 34.8343 )
+
+[node name="Chasers" type="Node2D" parent="."]
+
+[node name="Polygon2D" parent="Chasers" instance=ExtResource( 3 )]
+position = Vector2( 5232.39, -1865.33 )
+scale = Vector2( 82.9826, 2.75809 )
+
+[node name="missile-shooter" parent="Chasers" instance=ExtResource( 7 )]
+position = Vector2( 5316.04, -2561.45 )
+rotation = -1.57079
+missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
+
+[node name="MissileSpawn" parent="Chasers/missile-shooter" index="3"]
+rotation = 0.0
+
+[node name="HurtPlatform" parent="Chasers" instance=ExtResource( 4 )]
+position = Vector2( 5539.77, -1917.42 )
+scale = Vector2( 2.65745, 2.71884 )
+
+[node name="HurtPlatform2" parent="Chasers" instance=ExtResource( 4 )]
+position = Vector2( 5372.8, -1914.96 )
+scale = Vector2( 2.65745, 2.71884 )
+
+[node name="HurtPlatform3" parent="Chasers" instance=ExtResource( 4 )]
+position = Vector2( 5425.59, -1918.65 )
+scale = Vector2( 2.65745, 2.71884 )
+
+[node name="HurtPlatform4" parent="Chasers" instance=ExtResource( 4 )]
+position = Vector2( 5483.29, -1916.19 )
+scale = Vector2( 2.65745, 2.71884 )
+
+[node name="HurtPlatform5" parent="Chasers" instance=ExtResource( 4 )]
+position = Vector2( 5207.05, -1912.51 )
+scale = Vector2( 2.65745, 2.71884 )
+
+[node name="HurtPlatform6" parent="Chasers" instance=ExtResource( 4 )]
+position = Vector2( 5075.68, -1918.65 )
+scale = Vector2( 2.65745, 2.71884 )
+
+[node name="HurtPlatform7" parent="Chasers" instance=ExtResource( 4 )]
+position = Vector2( 4930.12, -1917.29 )
+scale = Vector2( 2.65745, 2.71884 )
+
+[node name="BasicMine" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 4765.45, -1970.78 )
+
+[node name="BasicMine10" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 4485.45, -2038.15 )
+
+[node name="BasicMine11" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 4218.08, -2173.94 )
+
+[node name="BasicMine12" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 4443.34, -2264.46 )
+
+[node name="BasicMine13" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 4198.08, -2500.25 )
+
+[node name="BasicMine14" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 4528.11, -2657.33 )
+
+[node name="BasicMine2" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 4867.26, -2010.69 )
+
+[node name="BasicMine3" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 4929.16, -2023.72 )
+
+[node name="BasicMine4" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 5118.13, -2135.31 )
+
+[node name="BasicMine5" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 5142.57, -2047.34 )
+
+[node name="BasicMine6" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 5245.19, -1958.56 )
+
+[node name="BasicMine7" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 5326.65, -2070.15 )
+
+[node name="BasicMine8" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 5445.56, -1976.48 )
+
+[node name="BasicMine9" parent="Chasers" instance=ExtResource( 5 )]
+position = Vector2( 5484.66, -2120.65 )
+
+[node name="Intro10" type="Label" parent="Chasers"]
+margin_left = 5677.6
+margin_top = -2034.47
+margin_right = 6151.6
+margin_bottom = -1850.47
+rect_rotation = 0.45296
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "When you get upstairs, there will be more missiles.
+
+They can chase you.
+
+Run.."
+
+[node name="Intro11" type="Label" parent="Chasers"]
+margin_left = 4602.91
+margin_top = -2629.75
+margin_right = 5076.91
+margin_bottom = -2445.75
+rect_rotation = 0.45296
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Remember to run."
+
+[node name="Polygon2D2" parent="Chasers" instance=ExtResource( 3 )]
+position = Vector2( 5328.35, -2455.51 )
+scale = Vector2( 78.716, 7.97189 )
+
+[node name="Polygon2D3" parent="Chasers" instance=ExtResource( 3 )]
+position = Vector2( 4471.36, -1929.52 )
+scale = Vector2( 7.05, 3.40001 )
+
+[node name="Polygon2D4" parent="Chasers" instance=ExtResource( 3 )]
+position = Vector2( 4334.36, -1990.52 )
+scale = Vector2( 7.05, 3.40001 )
+
+[node name="Polygon2D5" parent="Chasers" instance=ExtResource( 3 )]
+position = Vector2( 4200.36, -2058.52 )
+scale = Vector2( 7.05, 3.40001 )
+
+[node name="Polygon2D6" parent="Chasers" instance=ExtResource( 3 )]
+position = Vector2( 4420.36, -2173.52 )
+scale = Vector2( 7.05, 3.40001 )
+
+[node name="Polygon2D7" parent="Chasers" instance=ExtResource( 3 )]
+position = Vector2( 4250.36, -2330.52 )
+scale = Vector2( 7.05, 3.40001 )
+
+[node name="Polygon2D8" parent="Chasers" instance=ExtResource( 3 )]
+position = Vector2( 4452.47, -2432.63 )
+scale = Vector2( 7.05, 3.40001 )
+
+[editable path="Missilez/missile-shooter"]
+
+[editable path="Chasers/missile-shooter"]
