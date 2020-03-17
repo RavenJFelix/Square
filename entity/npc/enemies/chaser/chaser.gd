@@ -15,9 +15,9 @@ var LEFT = Vector2(-speed,0)
 var RIGHT = Vector2(speed, 0)
 var current_direction = DIRECTION.left
 var rotUp = 0
-var rotDown = 90
-var rotLeft = 180
-var rotRight = 270
+var rotDown = 180
+var rotLeft = 270
+var rotRight = 90
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -26,6 +26,7 @@ var target = NodePath()
 func _ready():
 	$Timer.start(timeout)
 	vel = Vector2(0, -speed).rotated(rotation)
+	
 
 func _physics_process(delta):
 	print(target)
@@ -70,7 +71,7 @@ func _chase_y():
 			current_direction = DIRECTION.down
 	elif target.position.y < position.y:
 		if current_direction == DIRECTION.down:
-			target_mode = MOVE_MODE.y
+			target_mode = MOVE_MODE.x
 		else:
 			vel = UP
 			rotation_degrees = rotUp
