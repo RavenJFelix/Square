@@ -33,17 +33,14 @@ func _ready():
 	
 
 func _physics_process(delta):
-	print(target)
-	match mode:
-		MODE.chase:
-			_chase()
-		MODE.search:
-			_search()
+	_search()
+	_chase()
 	vel = move_and_slide(vel)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 func _chase():
-	
+	if target == null:
+		return
 	match target_mode:
 		MOVE_MODE.x:
 			_chase_x()
@@ -82,8 +79,8 @@ func _chase_y():
 			current_direction = DIRECTION.up
 
 func _search():
-	print("SEARCHING")
 	var bodies = $TargetArea.get_overlapping_bodies()
+	target = null
 	for body in bodies:
 		if body.has_method("is_player"):
 			target = body
