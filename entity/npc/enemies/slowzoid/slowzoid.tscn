@@ -57,7 +57,7 @@ script = ExtResource( 2 )
 [node name="Polygon2D" type="Polygon2D" parent="slowzoidItself"]
 position = Vector2( 0.82205, -0.607606 )
 scale = Vector2( 0.966447, 0.941714 )
-color = Color( 1, 1, 1, 0.556863 )
+color = Color( 0.368627, 0.368627, 0.368627, 0.556863 )
 polygon = PoolVector2Array( 9.49659, -9.97372, 19.8438, 11.2641, -21.545, 11.2641, -11.1978, -9.97372 )
 
 [node name="DeathBox" type="Area2D" parent="slowzoidItself"]
