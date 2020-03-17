@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="HurtPlatform" type="Polygon2D"]
-color = Color( 1, 0, 0, 1 )
+color = Color( 0.447059, 0.486275, 0.0196078, 1 )
 polygon = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10, -10, -10 )
 script = ExtResource( 1 )
 
