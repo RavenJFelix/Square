@@ -16,6 +16,7 @@ position = Vector2( 85.9928, 89.5736 )
 
 [node name="missile-shooter" parent="." instance=ExtResource( 3 )]
 position = Vector2( 256.881, 72.0368 )
+missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
 
 [node name="Chaser" parent="." instance=ExtResource( 4 )]
 position = Vector2( -50.7367, -74.4067 )
