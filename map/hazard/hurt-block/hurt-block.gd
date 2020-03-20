@@ -14,6 +14,6 @@ func set_color_regular():
 
 func restore_color_regular():
 	color =lerp(color, regular_color, color_restore_speed)
-	
+
 func _physics_process(delta):
 	restore_color_regular()

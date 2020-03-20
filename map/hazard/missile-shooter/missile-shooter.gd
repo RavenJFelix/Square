@@ -21,7 +21,7 @@ func _shoot():
 	le_missile.rotation = $MissileSpawn.rotation
 	le_missile.speed = missile_speed
 	le_missile.timeout = missile_timout
-	get_parent().call_deferred("add_child", le_missile)
+	get_node("/root").call_deferred("add_child", le_missile)
 
 	
 	
