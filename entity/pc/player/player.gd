@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 enum MODE {normal, climb}
 
-const GRAV = 20
+var GRAV = 20
 export var climb_lat_speed = 100
 export var climb_speed = 300
 export var JUMP_POWER = 600
@@ -27,6 +27,10 @@ func _ready():
 	gui = get_node("PlayerGUI")
 	_update_health_display(health)
 	
+func flip_gravity():
+	UP = -UP
+	GRAV = -GRAV
+	JUMP_POWER = -JUMP_POWER
 func die():
 	queue_free()
 
