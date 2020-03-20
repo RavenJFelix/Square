@@ -8,7 +8,7 @@
 [ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=6]
 [ext_resource path="res://map/hazard/missile-shooter/missile-shooter.tscn" type="PackedScene" id=7]
 
-[node name="Node2D" type="Node2D"]
+[node name="Manager" type="Node2D"]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 156.471, 23.3995 )

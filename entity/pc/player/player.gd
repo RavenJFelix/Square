@@ -12,6 +12,7 @@ export var speed_mult = 1.0
 
 export var health = 100
 
+var alive = true
 var UP = Vector2(0,-1)
 var motion = Vector2(0, 0)
 var consecutive_jumps = 0
@@ -32,7 +33,10 @@ func flip_gravity():
 	GRAV = -GRAV
 	JUMP_POWER = -JUMP_POWER
 func die():
-	queue_free()
+	if alive:
+		gui.load_death_screen()
+		alive = false
+		
 
 func damage(damage):
 	assert(damage  > 0)
