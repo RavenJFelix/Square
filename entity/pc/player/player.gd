@@ -9,7 +9,7 @@ export var JUMP_POWER = 600
 export var speed = 500
 export var max_jumps = 1
 export var speed_mult = 1.0
-
+export var max_health = 200
 export var health = 100
 
 var alive = true
@@ -47,8 +47,12 @@ func damage(damage):
 
 func heal(heal_amount):
 	assert(heal_amount > 0)
+	var new_health = health + heal_amount
+	if new_health > max_health:
+		health = max_health
+	else:
+		health = new_health
 	_update_health_display(health)
-	health += heal_amount
 
 func _update_health_display(health):
 	gui.update_health(health)
