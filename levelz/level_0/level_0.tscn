@@ -196,32 +196,20 @@ Ideo: Matthew Fulford
 
 Just because they don't do damage doesn't make they are a concern."
 
-[node name="HealingBlock" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 3880, -221.364 )
-
-[node name="HealingBlock2" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 3901.05, -220.337 )
-
-[node name="HealingBlock3" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 3921.07, -219.824 )
-
-[node name="HealingBlock4" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 3939.03, -220.851 )
-
-[node name="HealingBlock5" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 3955.97, -219.311 )
-
-[node name="HealingBlock6" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 3970.86, -216.744 )
-
-[node name="HealingBlock7" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 3986.77, -215.204 )
-
 [node name="HealingBlock8" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 4002.18, -215.204 )
+position = Vector2( 3983.58, -215.204 )
+scale = Vector2( 2.8595, 1 )
+damage_time = 0.25
 
 [node name="HealingBlock9" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 4015.01, -215.204 )
+position = Vector2( 3928.56, -215.204 )
+scale = Vector2( 2.8595, 1 )
+damage_time = 0.25
+
+[node name="HealingBlock10" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 3891.21, -215.204 )
+scale = Vector2( 2.8595, 1 )
+damage_time = 0.25
 
 [node name="Missilez" type="Node2D" parent="."]
 
@@ -368,8 +356,9 @@ text = "When you get upstairs, there will be more missiles.
 
 They can chase you.
 
-The blue thing flips your gravity
+The blue thing flips your gravity. Overlapping's fun :)
 
+Gravity mods: Matt
 Run.."
 
 [node name="Intro11" type="Label" parent="Chasers2"]
@@ -502,7 +491,7 @@ position = Vector2( 5609.21, -2273.32 )
 scale = Vector2( 29.3874, 10.0435 )
 
 [node name="GravityFlipZone2" parent="Chasers2" instance=ExtResource( 9 )]
-position = Vector2( 5926.1, -2122.63 )
+position = Vector2( 5940.84, -2238.03 )
 scale = Vector2( 29.3874, 16.8025 )
 
 [node name="GravityFlipZone3" parent="Chasers2" instance=ExtResource( 9 )]
