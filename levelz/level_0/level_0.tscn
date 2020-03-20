@@ -144,9 +144,6 @@ scale = Vector2( 4.53279, 1.64263 )
 position = Vector2( 2885.65, -230.282 )
 scale = Vector2( 4.53279, 1.64263 )
 
-[node name="StaticBody2D" parent="Slowzoid_Finale/HurtPlatform12" index="0"]
-collision_layer = 2
-
 [node name="BasicMine" parent="Slowzoid_Finale" instance=ExtResource( 5 )]
 position = Vector2( 3113.23, -224.503 )
 
