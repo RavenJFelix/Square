@@ -179,7 +179,8 @@ rect_rotation = -1.96505
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Slowoids slow you down and prevent jumping. They do not hurt you. 
 
-If you can climb high enough, you can kill them.
+If you can climb high enough, you can kill them
+Ideo: Matthew Fulford
 
 Just because they don't do damage doesn't make they are a concern."
 
