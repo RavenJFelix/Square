@@ -32,4 +32,5 @@ position = Vector2( 439.542, 44.3586 )
 missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
 
 [node name="HealingBlock" parent="." instance=ExtResource( 5 )]
-position = Vector2( 215.604, 95.6778 )
+position = Vector2( 270.257, 72.9655 )
+scale = Vector2( 6.46527, 3.27124 )

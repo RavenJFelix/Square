@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://map/motion/ladder/ladder.tscn" type="PackedScene" id=2]
@@ -6,7 +6,9 @@
 [ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=4]
 [ext_resource path="res://map/hazard/basic-mine/basic-mine.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=6]
-[ext_resource path="res://map/hazard/missile-shooter/missile-shooter.tscn" type="PackedScene" id=7]
+[ext_resource path="res://map/hazard/health-block/health-block.tscn" type="PackedScene" id=7]
+[ext_resource path="res://map/hazard/missile-shooter/missile-shooter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://map/motion/gravity-flip-zone/gravity-zone.tscn" type="PackedScene" id=9]
 
 [node name="Manager" type="Node2D"]
 
@@ -67,7 +69,7 @@ position = Vector2( 2134.97, 236.927 )
 scale = Vector2( 109.194, 3.64487 )
 
 [node name="StaticBody2D4" parent="SlowzoidsandMinez" instance=ExtResource( 3 )]
-position = Vector2( 2379.92, 187.861 )
+position = Vector2( 2383.03, 174.177 )
 scale = Vector2( 7.95346, 2.0697 )
 
 [node name="StaticBody2D7" parent="SlowzoidsandMinez" instance=ExtResource( 3 )]
@@ -135,8 +137,15 @@ position = Vector2( 3268.37, -229.212 )
 scale = Vector2( 4.53279, 1.64263 )
 
 [node name="HurtPlatform11" parent="Slowzoid_Finale" instance=ExtResource( 4 )]
-position = Vector2( 3616.98, -228.397 )
+position = Vector2( 3630.64, -218.644 )
 scale = Vector2( 4.53279, 1.64263 )
+
+[node name="HurtPlatform12" parent="Slowzoid_Finale" instance=ExtResource( 4 )]
+position = Vector2( 2885.65, -230.282 )
+scale = Vector2( 4.53279, 1.64263 )
+
+[node name="StaticBody2D" parent="Slowzoid_Finale/HurtPlatform12" index="0"]
+collision_layer = 2
 
 [node name="BasicMine" parent="Slowzoid_Finale" instance=ExtResource( 5 )]
 position = Vector2( 3113.23, -224.503 )
@@ -168,7 +177,10 @@ margin_right = 4227.91
 margin_bottom = -442.402
 rect_rotation = 10.2007
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Climb this ridiculously large ladder."
+text = "Climb this ridiculously large ladder.
+
+Heal yourself for the coming trials by touching the
+green block"
 
 [node name="Intro7" type="Label" parent="Slowzoid_Finale"]
 margin_left = 2472.91
@@ -184,13 +196,40 @@ Ideo: Matthew Fulford
 
 Just because they don't do damage doesn't make they are a concern."
 
+[node name="HealingBlock" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 3880, -221.364 )
+
+[node name="HealingBlock2" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 3901.05, -220.337 )
+
+[node name="HealingBlock3" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 3921.07, -219.824 )
+
+[node name="HealingBlock4" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 3939.03, -220.851 )
+
+[node name="HealingBlock5" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 3955.97, -219.311 )
+
+[node name="HealingBlock6" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 3970.86, -216.744 )
+
+[node name="HealingBlock7" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 3986.77, -215.204 )
+
+[node name="HealingBlock8" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 4002.18, -215.204 )
+
+[node name="HealingBlock9" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+position = Vector2( 4015.01, -215.204 )
+
 [node name="Missilez" type="Node2D" parent="."]
 
 [node name="Polygon2D2" parent="Missilez" instance=ExtResource( 3 )]
 position = Vector2( 4816.08, -1259.38 )
 scale = Vector2( 1, 5.0302 )
 
-[node name="missile-shooter" parent="Missilez" instance=ExtResource( 7 )]
+[node name="missile-shooter" parent="Missilez" instance=ExtResource( 8 )]
 position = Vector2( 5808.6, -1230.54 )
 rotation = 3.14159
 
@@ -233,17 +272,17 @@ scale = Vector2( 1, 34.8343 )
 position = Vector2( 5232.39, -1865.33 )
 scale = Vector2( 82.9826, 2.75809 )
 
-[node name="missile-shooter" parent="Chasers2" instance=ExtResource( 7 )]
+[node name="missile-shooter" parent="Chasers2" instance=ExtResource( 8 )]
 position = Vector2( 6135.92, -2558.6 )
 rotation = -1.57079
 missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
 
-[node name="missile-shooter3" parent="Chasers2" instance=ExtResource( 7 )]
+[node name="missile-shooter3" parent="Chasers2" instance=ExtResource( 8 )]
 position = Vector2( 5138.3, -2554.44 )
 rotation = -1.57079
 missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
 
-[node name="missile-shooter2" parent="Chasers2" instance=ExtResource( 7 )]
+[node name="missile-shooter2" parent="Chasers2" instance=ExtResource( 8 )]
 position = Vector2( 7041.24, -2546.93 )
 rotation = -1.57079
 missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
@@ -329,6 +368,8 @@ text = "When you get upstairs, there will be more missiles.
 
 They can chase you.
 
+The blue thing flips your gravity
+
 Run.."
 
 [node name="Intro11" type="Label" parent="Chasers2"]
@@ -377,7 +418,7 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "You won!!!"
 
 [node name="Polygon2D2" parent="Chasers2" instance=ExtResource( 3 )]
-position = Vector2( 6100.55, -2455.51 )
+position = Vector2( 6477.39, -2442.88 )
 scale = Vector2( 155.936, 7.97189 )
 polygon = PoolVector2Array( -10, -10, 10, -10, 10, -1.02016, 10, 10, -10, 10, -10, -10 )
 
@@ -455,5 +496,23 @@ position = Vector2( 6856.66, -2663.51 )
 [node name="Polygon2D9" parent="Chasers2" instance=ExtResource( 3 )]
 position = Vector2( 7276.23, -2616.09 )
 scale = Vector2( 1, 9.20211 )
+
+[node name="GravityFlipZone" parent="Chasers2" instance=ExtResource( 9 )]
+position = Vector2( 5609.21, -2273.32 )
+scale = Vector2( 29.3874, 10.0435 )
+
+[node name="GravityFlipZone2" parent="Chasers2" instance=ExtResource( 9 )]
+position = Vector2( 5926.1, -2122.63 )
+scale = Vector2( 29.3874, 16.8025 )
+
+[node name="GravityFlipZone3" parent="Chasers2" instance=ExtResource( 9 )]
+position = Vector2( 5040.91, -2333.91 )
+scale = Vector2( 33.2288, 15.0488 )
+
+[node name="HealingBlock" parent="Chasers2" instance=ExtResource( 7 )]
+position = Vector2( 7569.99, -2526.32 )
+scale = Vector2( 19.0462, 1 )
+
+[editable path="Slowzoid_Finale/HurtPlatform12"]
 
 [editable path="Missilez/missile-shooter"]
