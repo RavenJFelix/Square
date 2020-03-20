@@ -4,27 +4,28 @@
 [ext_resource path="res://map/motion/ladder/ladder.tscn" type="PackedScene" id=2]
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=4]
-[ext_resource path="res://map/hazard/basic-mine/basic-mine.tscn" type="PackedScene" id=5]
-[ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=6]
-[ext_resource path="res://map/hazard/health-block/health-block.tscn" type="PackedScene" id=7]
+[ext_resource path="res://map/hazard/health-block/health-block.tscn" type="PackedScene" id=5]
+[ext_resource path="res://map/hazard/basic-mine/basic-mine.tscn" type="PackedScene" id=6]
+[ext_resource path="res://entity/npc/enemies/slowzoid/slowzoid.tscn" type="PackedScene" id=7]
 [ext_resource path="res://map/hazard/missile-shooter/missile-shooter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://map/motion/gravity-flip-zone/gravity-zone.tscn" type="PackedScene" id=9]
 
 [node name="Manager" type="Node2D"]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 156.471, 23.3995 )
+position = Vector2( -1003.17, 90.7323 )
 
 [node name="ladder" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2646.89, 11.8719 )
 scale = Vector2( 1, 22.7726 )
 
 [node name="Damage" type="Node2D" parent="."]
-editor/display_folded = true
+position = Vector2( -2586.54, 74.9484 )
 
 [node name="StaticBody2D" parent="Damage" instance=ExtResource( 3 )]
-position = Vector2( 154.179, 129.228 )
-scale = Vector2( 14.9383, 6.44737 )
+position = Vector2( 1838.23, 129.228 )
+scale = Vector2( 183.344, 6.44737 )
+polygon = PoolVector2Array( -10, -10, 10, -10, 10, 0.334412, 10, 10, -10, 10, -10, -10 )
 
 [node name="Intro" type="Label" parent="Damage"]
 margin_right = 191.0
@@ -35,10 +36,10 @@ text = "Hello!
 Left and right arrows to move!"
 
 [node name="Intro2" type="Label" parent="Damage"]
-margin_left = 235.151
-margin_top = -27.805
-margin_right = 503.151
-margin_bottom = 54.195
+margin_left = 33.6887
+margin_top = -197.353
+margin_right = 301.689
+margin_bottom = -115.353
 rect_rotation = -3.27278
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Up arrow key to jump!
@@ -48,19 +49,120 @@ stuck falling into an eternal void...
 Yeah. Welcome to alpha testing."
 
 [node name="Intro4" type="Label" parent="Damage"]
-margin_left = 561.856
-margin_top = -106.323
-margin_right = 961.856
-margin_bottom = -24.3226
+margin_left = 352.702
+margin_top = -251.267
+margin_right = 752.702
+margin_bottom = -169.267
 rect_rotation = 6.40926
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "These damage you periodically
 
 You can also double-jump"
 
+[node name="HurtPlatform2" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 582.006, -36.5732 )
+scale = Vector2( 3.72002, 10.6204 )
+polygon = PoolVector2Array( -10, -10, 10, -10, 10, -0.00084877, 10, 10, -10, 10, -10, -10 )
+
+[node name="HurtPlatform3" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 811.906, -60.7239 )
+scale = Vector2( 3.72002, 13.0355 )
+polygon = PoolVector2Array( -10, -10, 10, -10, 10, -0.00084877, 10, 10, -10, 10, -10, -10 )
+
+[node name="HurtPlatform4" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 1037.06, -76.1847 )
+scale = Vector2( 3.72002, 14.5816 )
+polygon = PoolVector2Array( -10, -10, 10, -10, 10, -0.00084877, 10, 10, -10, 10, -10, -10 )
+
+[node name="HealingBlock11" parent="Damage" instance=ExtResource( 5 )]
+position = Vector2( 2267.09, 55.1846 )
+scale = Vector2( 2.8595, 1 )
+damage_time = 0.25
+
+[node name="HealingBlock16" parent="Damage" instance=ExtResource( 5 )]
+position = Vector2( 2136.22, 55.1846 )
+scale = Vector2( 2.8595, 1 )
+damage_time = 0.25
+
+[node name="HealingBlock13" parent="Damage" instance=ExtResource( 5 )]
+position = Vector2( 2212.08, 55.1846 )
+scale = Vector2( 2.8595, 1 )
+damage_time = 0.25
+
+[node name="HealingBlock15" parent="Damage" instance=ExtResource( 5 )]
+position = Vector2( 2081.2, 55.1846 )
+scale = Vector2( 2.8595, 1 )
+damage_time = 0.25
+
+[node name="HealingBlock12" parent="Damage" instance=ExtResource( 5 )]
+position = Vector2( 2173.92, 55.1846 )
+scale = Vector2( 2.8595, 1 )
+damage_time = 0.25
+
+[node name="HealingBlock14" parent="Damage" instance=ExtResource( 5 )]
+position = Vector2( 2043.05, 55.1846 )
+scale = Vector2( 2.8595, 1 )
+damage_time = 0.25
+
+[node name="Label" type="Label" parent="Damage"]
+margin_left = 2112.05
+margin_top = -96.5784
+margin_right = 2184.05
+margin_bottom = -82.5784
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "These heal periodically"
+
 [node name="HurtPlatform" parent="Damage" instance=ExtResource( 4 )]
-position = Vector2( 637.179, 204.808 )
-scale = Vector2( 19.9962, 6.60786 )
+position = Vector2( 1213.57, -72.6093 )
+scale = Vector2( 9.09142, 8.42531 )
+
+[node name="HurtPlatform5" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 1476.57, -12.6092 )
+scale = Vector2( 9.09142, 8.42531 )
+
+[node name="HurtPlatform6" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 1491.57, -283.609 )
+scale = Vector2( 9.09142, 8.42531 )
+
+[node name="HurtPlatform7" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 1767.72, -125.806 )
+scale = Vector2( 9.09142, 8.42531 )
+
+[node name="HurtPlatform8" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 2007.15, -237.357 )
+scale = Vector2( 9.09142, 8.42531 )
+
+[node name="HurtPlatform9" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 2427.2, -170.107 )
+scale = Vector2( 9.09142, 8.42531 )
+
+[node name="HurtPlatform10" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 2625.7, -307.107 )
+scale = Vector2( 28.8414, 8.42531 )
+
+[node name="HurtPlatform11" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 3030.13, -97.9509 )
+scale = Vector2( 6.12773, 8.42531 )
+
+[node name="HurtPlatform12" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 3223.25, -59.4245 )
+scale = Vector2( 6.12773, 8.42531 )
+
+[node name="HurtPlatform13" parent="Damage" instance=ExtResource( 4 )]
+position = Vector2( 3439.04, -123.672 )
+scale = Vector2( 6.12773, 8.42531 )
+
+[node name="Polygon2D" parent="Damage" instance=ExtResource( 3 )]
+position = Vector2( 2482.43, 22.1182 )
+scale = Vector2( 12.3395, 4.32742 )
+
+[node name="Polygon2D2" parent="Damage" instance=ExtResource( 3 )]
+position = Vector2( 2869.39, -20.8818 )
+scale = Vector2( 29.1356, 8.62742 )
+
+[node name="Polygon2D3" parent="Damage" instance=ExtResource( 3 )]
+position = Vector2( 3279.07, -20.8818 )
+scale = Vector2( 29.1356, 8.62742 )
 
 [node name="SlowzoidsandMinez" type="Node2D" parent="."]
 
@@ -85,25 +187,25 @@ rect_rotation = -2.47876
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Climb to kill it!"
 
-[node name="HurtPlatform2" parent="SlowzoidsandMinez" instance=ExtResource( 5 )]
+[node name="HurtPlatform2" parent="SlowzoidsandMinez" instance=ExtResource( 6 )]
 position = Vector2( 1313.74, 188.47 )
 
-[node name="HurtPlatform3" parent="SlowzoidsandMinez" instance=ExtResource( 5 )]
+[node name="HurtPlatform3" parent="SlowzoidsandMinez" instance=ExtResource( 6 )]
 position = Vector2( 1365.42, 190.361 )
 
-[node name="HurtPlatform4" parent="SlowzoidsandMinez" instance=ExtResource( 5 )]
+[node name="HurtPlatform4" parent="SlowzoidsandMinez" instance=ExtResource( 6 )]
 position = Vector2( 1423.4, 191.622 )
 
-[node name="HurtPlatform5" parent="SlowzoidsandMinez" instance=ExtResource( 5 )]
+[node name="HurtPlatform5" parent="SlowzoidsandMinez" instance=ExtResource( 6 )]
 position = Vector2( 1577.18, 190.991 )
 
-[node name="HurtPlatform6" parent="SlowzoidsandMinez" instance=ExtResource( 5 )]
+[node name="HurtPlatform6" parent="SlowzoidsandMinez" instance=ExtResource( 6 )]
 position = Vector2( 1674.24, 189.101 )
 
-[node name="HurtPlatform7" parent="SlowzoidsandMinez" instance=ExtResource( 5 )]
+[node name="HurtPlatform7" parent="SlowzoidsandMinez" instance=ExtResource( 6 )]
 position = Vector2( 1742.31, 177.126 )
 
-[node name="HurtPlatform8" parent="SlowzoidsandMinez" instance=ExtResource( 5 )]
+[node name="HurtPlatform8" parent="SlowzoidsandMinez" instance=ExtResource( 6 )]
 position = Vector2( 1828.02, 185.949 )
 
 [node name="Intro3" type="Label" parent="SlowzoidsandMinez"]
@@ -129,7 +231,7 @@ scale = Vector2( 1, 49.6327 )
 position = Vector2( 4148.16, -717.691 )
 scale = Vector2( 1, 49.6327 )
 
-[node name="slowzoidMan2" parent="Slowzoid_Finale" instance=ExtResource( 6 )]
+[node name="slowzoidMan2" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
 position = Vector2( 3175.47, -396.234 )
 
 [node name="HurtPlatform10" parent="Slowzoid_Finale" instance=ExtResource( 4 )]
@@ -144,13 +246,13 @@ scale = Vector2( 4.53279, 1.64263 )
 position = Vector2( 2885.65, -230.282 )
 scale = Vector2( 4.53279, 1.64263 )
 
-[node name="BasicMine" parent="Slowzoid_Finale" instance=ExtResource( 5 )]
+[node name="BasicMine" parent="Slowzoid_Finale" instance=ExtResource( 6 )]
 position = Vector2( 3113.23, -224.503 )
 
-[node name="BasicMine2" parent="Slowzoid_Finale" instance=ExtResource( 5 )]
+[node name="BasicMine2" parent="Slowzoid_Finale" instance=ExtResource( 6 )]
 position = Vector2( 3439.89, -228.79 )
 
-[node name="BasicMine3" parent="Slowzoid_Finale" instance=ExtResource( 5 )]
+[node name="BasicMine3" parent="Slowzoid_Finale" instance=ExtResource( 6 )]
 position = Vector2( 3762.26, -223.646 )
 
 [node name="Intro6" type="Label" parent="Slowzoid_Finale"]
@@ -193,17 +295,17 @@ Ideo: Matthew Fulford
 
 Just because they don't do damage doesn't make they are a concern."
 
-[node name="HealingBlock8" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 3983.58, -215.204 )
+[node name="HealingBlock8" parent="Slowzoid_Finale" instance=ExtResource( 5 )]
+position = Vector2( 3984.37, -215.204 )
 scale = Vector2( 2.8595, 1 )
 damage_time = 0.25
 
-[node name="HealingBlock9" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
-position = Vector2( 3928.56, -215.204 )
+[node name="HealingBlock9" parent="Slowzoid_Finale" instance=ExtResource( 5 )]
+position = Vector2( 3929.36, -215.204 )
 scale = Vector2( 2.8595, 1 )
 damage_time = 0.25
 
-[node name="HealingBlock10" parent="Slowzoid_Finale" instance=ExtResource( 7 )]
+[node name="HealingBlock10" parent="Slowzoid_Finale" instance=ExtResource( 5 )]
 position = Vector2( 3891.21, -215.204 )
 scale = Vector2( 2.8595, 1 )
 damage_time = 0.25
@@ -300,46 +402,46 @@ scale = Vector2( 2.65745, 2.71884 )
 position = Vector2( 4930.12, -1917.29 )
 scale = Vector2( 2.65745, 2.71884 )
 
-[node name="BasicMine" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 4765.45, -1970.78 )
 
-[node name="BasicMine10" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine10" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 4485.45, -2038.15 )
 
-[node name="BasicMine11" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine11" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 4218.08, -2173.94 )
 
-[node name="BasicMine12" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine12" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 4443.34, -2264.46 )
 
-[node name="BasicMine13" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine13" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 4198.08, -2500.25 )
 
-[node name="BasicMine14" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine14" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 4528.11, -2657.33 )
 
-[node name="BasicMine2" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine2" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 4867.26, -2010.69 )
 
-[node name="BasicMine3" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine3" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 4929.16, -2023.72 )
 
-[node name="BasicMine4" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine4" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 5118.13, -2135.31 )
 
-[node name="BasicMine5" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine5" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 5142.57, -2047.34 )
 
-[node name="BasicMine6" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine6" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 5245.19, -1958.56 )
 
-[node name="BasicMine7" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine7" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 5326.65, -2070.15 )
 
-[node name="BasicMine8" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine8" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 5445.56, -1976.48 )
 
-[node name="BasicMine9" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine9" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 5484.66, -2120.65 )
 
 [node name="Intro10" type="Label" parent="Chasers2"]
@@ -458,25 +560,25 @@ position = Vector2( 6462.66, -2541.87 )
 rotation = -1.57079
 scale = Vector2( 1.76442, 4.26621 )
 
-[node name="BasicMine16" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine16" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 6523.21, -2560.91 )
 
-[node name="BasicMine18" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine18" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 6240.11, -2584.66 )
 
-[node name="BasicMine19" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine19" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 6291.41, -2723.36 )
 
-[node name="BasicMine20" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine20" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 6646.71, -2680.61 )
 
-[node name="BasicMine21" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine21" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 6514.66, -2723.36 )
 
-[node name="BasicMine22" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine22" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 6854.76, -2555.21 )
 
-[node name="BasicMine23" parent="Chasers2" instance=ExtResource( 5 )]
+[node name="BasicMine23" parent="Chasers2" instance=ExtResource( 6 )]
 position = Vector2( 6856.66, -2663.51 )
 
 [node name="Polygon2D9" parent="Chasers2" instance=ExtResource( 3 )]
@@ -495,7 +597,7 @@ scale = Vector2( 29.3874, 16.8025 )
 position = Vector2( 5040.91, -2333.91 )
 scale = Vector2( 33.2288, 15.0488 )
 
-[node name="HealingBlock" parent="Chasers2" instance=ExtResource( 7 )]
+[node name="HealingBlock" parent="Chasers2" instance=ExtResource( 5 )]
 position = Vector2( 7569.99, -2526.32 )
 scale = Vector2( 19.0462, 1 )
 
