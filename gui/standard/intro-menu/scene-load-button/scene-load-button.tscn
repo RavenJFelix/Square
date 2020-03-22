@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://resourcez/themz/default_scene.tres" type="Theme" id=1]
-[ext_resource path="res://gui/standard/intro-menu/level-load/level-load-button.gd" type="Script" id=2]
+[ext_resource path="res://gui/standard/intro-menu/scene-load-button/scene-load-button.gd" type="Script" id=2]
 
 [node name="LevelLoadButton" type="Button"]
 margin_right = 12.0
