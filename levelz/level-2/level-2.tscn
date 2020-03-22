@@ -1,0 +1,116 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://map/modifiers/change-scene/change-scene-zone.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Double" type="Node2D" parent="."]
+
+[node name="Polygon2D" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 1508.77, 138.336 )
+scale = Vector2( 153.874, 4.03115 )
+
+[node name="Player" parent="Double" instance=ExtResource( 2 )]
+position = Vector2( 52.8829, 22.3459 )
+
+[node name="Label" type="Label" parent="Double"]
+margin_left = 65.6788
+margin_top = -81.6009
+margin_right = 343.679
+margin_bottom = -67.6009
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You can double jump(as well as piss off Einstein). A few years ago,
+a really hard game based solely off air-jumping pissed off a lot of gamers
+while paradoxically capturing their hearts."
+
+[node name="Label2" type="Label" parent="Double"]
+margin_left = 513.778
+margin_top = -137.994
+margin_right = 868.778
+margin_bottom = -106.994
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Jump twice to get over this one!"
+
+[node name="Label3" type="Label" parent="Double"]
+margin_left = 714.159
+margin_top = -185.219
+margin_right = 1069.16
+margin_bottom = -154.219
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Hop fucker hop."
+
+[node name="Label4" type="Label" parent="Double"]
+margin_left = 1275.26
+margin_top = -403.353
+margin_right = 1630.26
+margin_bottom = -372.353
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Try to make it over this gap!"
+
+[node name="Label5" type="Label" parent="Double"]
+margin_left = 1936.1
+margin_top = -402.571
+margin_right = 2407.1
+margin_bottom = -354.571
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "This one will need an even longer jump"
+
+[node name="Label7" type="Label" parent="Double"]
+margin_left = 2589.86
+margin_top = -343.44
+margin_right = 3060.86
+margin_bottom = -295.44
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Jump here!!!!"
+
+[node name="Label8" type="Label" parent="Double"]
+margin_left = 4008.93
+margin_top = -747.939
+margin_right = 4479.93
+margin_bottom = -699.939
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Up high!!!"
+
+[node name="Label6" type="Label" parent="Double"]
+margin_left = 2609.05
+margin_top = -101.844
+margin_right = 3080.05
+margin_bottom = -53.8436
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "See that twinkly thing? Don't worry, 
+you aren't high. Just touch it and you can move 
+to the next shit-ass level"
+
+[node name="Polygon2D2" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 2200.11, -4.74267 )
+scale = Vector2( 164.524, 11.1537 )
+
+[node name="Polygon2D8" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 1052.79, -217.019 )
+scale = Vector2( 30.2794, 11.1537 )
+
+[node name="Polygon2D4" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 1099.32, 49.8722 )
+scale = Vector2( 2.45044, 5.77793 )
+
+[node name="Polygon2D5" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 1637.01, -704.021 )
+scale = Vector2( 54.8416, 5.39793 )
+
+[node name="Polygon2D6" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 4067.27, -182.537 )
+scale = Vector2( 56.4146, 36.6346 )
+
+[node name="Polygon2D7" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 3287.72, -209.751 )
+scale = Vector2( 22.0268, 10.9498 )
+
+[node name="Polygon2D3" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 1887.35, -216.178 )
+scale = Vector2( 29.6518, 11.0989 )
+
+[node name="ChangeScene" parent="Double" instance=ExtResource( 3 )]
+position = Vector2( 4040.18, -838.664 )
+scale = Vector2( 3.375, 4.27751 )
