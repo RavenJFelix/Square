@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://resourcez/themz/default_scene.tres" type="Theme" id=1]
 [ext_resource path="res://gui/intro/intro-menu.gd" type="Script" id=2]
 [ext_resource path="res://resourcez/fontz/Satella.tres" type="DynamicFont" id=3]
+[ext_resource path="res://gui/standard/intro-menu/scene-load-button/scene-load-button.tscn" type="PackedScene" id=4]
 
 [node name="IntroMenu" type="Control"]
 anchor_right = 1.0
@@ -12,25 +13,29 @@ script = ExtResource( 2 )
 first_level = "res://levelz/level_0/level_0.tscn"
 
 [node name="VSplitContainer" type="VSplitContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1022.0
+margin_bottom = 360.0
 
 [node name="Label" type="Label" parent="VSplitContainer"]
-margin_right = 355.0
+margin_right = 1022.0
 margin_bottom = 112.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Square"
+align = 1
 
 [node name="Options" type="VSplitContainer" parent="VSplitContainer"]
 margin_top = 124.0
-margin_right = 355.0
-margin_bottom = 236.0
+margin_right = 1022.0
+margin_bottom = 360.0
 
-[node name="Button" type="Button" parent="VSplitContainer/Options"]
-margin_right = 355.0
+[node name="LevelLoadButton" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
+margin_right = 1022.0
 margin_bottom = 112.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Play"
-[connection signal="pressed" from="VSplitContainer/Options/Button" to="." method="_on_Button_pressed"]
+
+[node name="LevelLoadButton2" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
+margin_top = 124.0
+margin_right = 1022.0
+margin_bottom = 236.0
+text = "Level 0"

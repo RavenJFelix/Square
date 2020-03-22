@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://resourcez/themz/default_scene.tres" type="Theme" id=1]
+[ext_resource path="res://gui/standard/intro-menu/scene-load-button/scene-load-button.tscn" type="PackedScene" id=2]
 
 [node name="Levelz" type="Control"]
 anchor_right = 1.0
@@ -28,25 +29,21 @@ margin_right = 256.0
 margin_bottom = 112.0
 columns = 6
 
-[node name="level_1" type="Button" parent="CenterContainer/VSplitContainer/GridContainer"]
+[node name="LevelLoadButton" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
 margin_right = 61.0
 margin_bottom = 112.0
-text = "1"
 
-[node name="level_2" type="Button" parent="CenterContainer/VSplitContainer/GridContainer"]
+[node name="LevelLoadButton2" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 65.0
 margin_right = 126.0
 margin_bottom = 112.0
-text = "2"
 
-[node name="level_3" type="Button" parent="CenterContainer/VSplitContainer/GridContainer"]
+[node name="LevelLoadButton3" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 130.0
 margin_right = 191.0
 margin_bottom = 112.0
-text = "3"
 
-[node name="level_4" type="Button" parent="CenterContainer/VSplitContainer/GridContainer"]
+[node name="LevelLoadButton4" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 195.0
 margin_right = 256.0
 margin_bottom = 112.0
-text = "4"
