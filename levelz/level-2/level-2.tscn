@@ -25,6 +25,14 @@ text = "You can double jump(as well as piss off Einstein). A few years ago,
 a really hard game based solely off air-jumping pissed off a lot of gamers
 while paradoxically capturing their hearts."
 
+[node name="Label11" type="Label" parent="Double"]
+margin_left = -689.375
+margin_top = 536.507
+margin_right = -226.375
+margin_bottom = 584.507
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Forsooth??? A fucking easter egg???"
+
 [node name="Label2" type="Label" parent="Double"]
 margin_left = 513.778
 margin_top = -137.994
@@ -116,7 +124,7 @@ position = Vector2( 1099.32, 49.8722 )
 scale = Vector2( 2.45044, 5.77793 )
 
 [node name="Polygon2D5" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 1637.01, -704.021 )
+position = Vector2( -505.523, 844.07 )
 scale = Vector2( 54.8416, 5.39793 )
 
 [node name="Polygon2D6" parent="Double" instance=ExtResource( 1 )]
@@ -138,3 +146,7 @@ scale = Vector2( 29.6518, 11.0989 )
 [node name="ChangeScene" parent="Double" instance=ExtResource( 3 )]
 position = Vector2( 5428.45, -903.166 )
 scale = Vector2( 3.375, 4.27751 )
+
+[node name="ChangeScene2" parent="Double" instance=ExtResource( 3 )]
+position = Vector2( -529.545, 687.067 )
+scene = "res://levelz/level_0/level_0.tscn"
