@@ -18,26 +18,27 @@ margin_bottom = 360.0
 
 [node name="Label" type="Label" parent="VSplitContainer"]
 margin_right = 1022.0
-margin_bottom = 112.0
+margin_bottom = 84.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Square"
 align = 1
 
 [node name="Options" type="VSplitContainer" parent="VSplitContainer"]
-margin_top = 124.0
+margin_top = 96.0
 margin_right = 1022.0
 margin_bottom = 360.0
 
 [node name="Play" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
 margin_right = 1022.0
-margin_bottom = 112.0
+margin_bottom = 84.0
 text = "Play"
+scene = "res://levelz/level-1/level-1.tscn"
 
 [node name="Level 0" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
-margin_top = 124.0
+margin_top = 96.0
 margin_right = 1022.0
-margin_bottom = 236.0
+margin_bottom = 264.0
 text = "Levels"
 scene = "res://gui/intro/Levelz.tscn"
 
