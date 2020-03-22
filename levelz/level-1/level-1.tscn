@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://map/modifiers/change-scene/change-scene-zone.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Movement Intro" type="Node2D" parent="."]
+
+[node name="Polygon2D" parent="Movement Intro" instance=ExtResource( 1 )]
+position = Vector2( 1508.77, 138.336 )
+scale = Vector2( 153.874, 4.03115 )
+
+[node name="Player" parent="Movement Intro" instance=ExtResource( 2 )]
+position = Vector2( 52.8829, 22.3459 )
+
+[node name="Label" type="Label" parent="Movement Intro"]
+margin_left = 65.6788
+margin_top = -81.6009
+margin_right = 343.679
+margin_bottom = -67.6009
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Use arrow keys to move around. If you didn't know this,
+Welcome to the world of platformer gaming!"
+
+[node name="Label2" type="Label" parent="Movement Intro"]
+margin_left = 513.778
+margin_top = -137.994
+margin_right = 868.778
+margin_bottom = -106.994
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Use the up arrow to fucking jump."
+
+[node name="Label3" type="Label" parent="Movement Intro"]
+margin_left = 1013.16
+margin_top = -86.2186
+margin_right = 1368.16
+margin_bottom = -55.2186
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Hop fucker hop."
+
+[node name="Label4" type="Label" parent="Movement Intro"]
+margin_left = 1372.25
+margin_top = -208.142
+margin_right = 1727.25
+margin_bottom = -177.142
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You know, you're a really good at jumping."
+
+[node name="Label5" type="Label" parent="Movement Intro"]
+margin_left = 2161.88
+margin_top = -237.866
+margin_right = 2516.88
+margin_bottom = -206.866
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "To jump while going down is redundant, and makes you have a harder fall.
+
+(Like the devs weren't shithead to skip a fall-damage mechanic)"
+
+[node name="Label6" type="Label" parent="Movement Intro"]
+margin_left = 2609.05
+margin_top = -101.844
+margin_right = 3080.05
+margin_bottom = -53.8436
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "See that twinkly thing? Don't worry, 
+you aren't high. Just touch it and you can move 
+to the next shit-ass level"
+
+[node name="Polygon2D2" parent="Movement Intro" instance=ExtResource( 1 )]
+position = Vector2( 580.885, 49.8722 )
+scale = Vector2( 2.45044, 5.77793 )
+
+[node name="Polygon2D4" parent="Movement Intro" instance=ExtResource( 1 )]
+position = Vector2( 1099.32, 49.8722 )
+scale = Vector2( 2.45044, 5.77793 )
+
+[node name="Polygon2D5" parent="Movement Intro" instance=ExtResource( 1 )]
+position = Vector2( 1870.19, 52.8832 )
+scale = Vector2( 54.8416, 5.39793 )
+
+[node name="Polygon2D6" parent="Movement Intro" instance=ExtResource( 1 )]
+position = Vector2( 1864.29, -49.0193 )
+scale = Vector2( 43.7212, 5.39793 )
+
+[node name="Polygon2D7" parent="Movement Intro" instance=ExtResource( 1 )]
+position = Vector2( 1876.46, -140.666 )
+scale = Vector2( 22.0268, 5.39793 )
+
+[node name="Polygon2D3" parent="Movement Intro" instance=ExtResource( 1 )]
+position = Vector2( 835.962, -40.1767 )
+scale = Vector2( 13.8444, 2.65378 )
+
+[node name="ChangeScene" parent="Movement Intro" instance=ExtResource( 3 )]
+position = Vector2( 2742.85, 55.2758 )
+scale = Vector2( 3.375, 4.27751 )
