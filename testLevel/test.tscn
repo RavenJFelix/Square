@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://map/motion/gravity-flip-zone/gravity-zone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://map/hazard/missile-shooter/missile-shooter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://map/hazard/health-block/health-block.tscn" type="PackedScene" id=5]
+[ext_resource path="res://map/modifiers/change-scene/change-scene-zone.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -34,3 +35,7 @@ missile_scene = "res://entity/npc/enemies/chaser/tangential-chaser.tscn"
 [node name="HealingBlock" parent="." instance=ExtResource( 5 )]
 position = Vector2( 270.257, 72.9655 )
 scale = Vector2( 6.46527, 3.27124 )
+
+[node name="ChangeScene" parent="." instance=ExtResource( 6 )]
+position = Vector2( 163.639, 88.394 )
+scene = "res://gui/intro/intro-menu.tscn"

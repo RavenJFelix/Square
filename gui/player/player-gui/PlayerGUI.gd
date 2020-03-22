@@ -10,7 +10,7 @@ func _ready():
 	pass # Replace with function body.
 
 func update_health(new_health):
-	$Health.set_text("Health: " + String(new_health))
+	$PlayerGUI.set_health(new_health)
 
 func reload_level():
 	get_tree().reload_current_scene()
