@@ -29,13 +29,19 @@ margin_top = 124.0
 margin_right = 1022.0
 margin_bottom = 360.0
 
-[node name="LevelLoadButton" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
+[node name="Play" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
 margin_right = 1022.0
 margin_bottom = 112.0
 text = "Play"
 
-[node name="LevelLoadButton2" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
+[node name="Level 0" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
 margin_top = 124.0
 margin_right = 1022.0
 margin_bottom = 236.0
-text = "Level 0"
+text = "Play"
+
+[node name="Levels" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
+margin_top = 223.96
+margin_right = 1022.0
+margin_bottom = 335.96
+text = "Play"
