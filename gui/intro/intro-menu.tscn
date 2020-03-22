@@ -38,10 +38,12 @@ text = "Play"
 margin_top = 124.0
 margin_right = 1022.0
 margin_bottom = 236.0
-text = "Play"
+text = "Levels"
+scene = "res://gui/intro/Levelz.tscn"
 
 [node name="Levels" parent="VSplitContainer/Options" instance=ExtResource( 4 )]
-margin_top = 223.96
+margin_top = 242.03
 margin_right = 1022.0
-margin_bottom = 335.96
-text = "Play"
+margin_bottom = 354.03
+text = "Level 0"
+scene = "res://levelz/level_0/level_0.tscn"
