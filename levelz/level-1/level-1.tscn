@@ -93,5 +93,6 @@ position = Vector2( 835.962, -40.1767 )
 scale = Vector2( 13.8444, 2.65378 )
 
 [node name="ChangeScene" parent="Movement Intro" instance=ExtResource( 3 )]
-position = Vector2( 2742.85, 55.2758 )
+position = Vector2( 2781.66, 25.4932 )
 scale = Vector2( 3.375, 4.27751 )
+scene = "res://levelz/level-2/level-2.tscn"
