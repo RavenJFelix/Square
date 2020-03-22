@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://gui/player/game-over/Game-Over.gd" type="Script" id=1]
+[ext_resource path="res://resourcez/themz/default_scene.tres" type="Theme" id=1]
+[ext_resource path="res://gui/player/game-over/Game-Over.gd" type="Script" id=2]
+[ext_resource path="res://gui/standard/intro-menu/scene-load-button/scene-load-button.tscn" type="PackedScene" id=3]
 
 [node name="Game-Over" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -15,11 +18,27 @@ grow_vertical = 2
 color = Color( 0, 0, 0, 0.368627 )
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -20.0
 
-[node name="Button" type="Button" parent="HSplitContainer"]
-margin_right = 68.0
-margin_bottom = 40.0
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -245.0
+margin_right = 245.0
+margin_bottom = 236.0
+
+[node name="Button" type="Button" parent="VSplitContainer"]
+margin_right = 511.0
+margin_bottom = 112.0
 text = "Try again"
-[connection signal="pressed" from="HSplitContainer/Button" to="." method="_on_Button_pressed"]
+
+[node name="LevelLoadButton" parent="VSplitContainer" instance=ExtResource( 3 )]
+margin_top = 124.0
+margin_right = 511.0
+margin_bottom = 236.0
+text = "Main Menu"
+scene = "res://gui/intro/intro-menu.tscn"
+[connection signal="pressed" from="VSplitContainer/Button" to="." method="_on_Button_pressed"]
