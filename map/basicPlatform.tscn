@@ -7,6 +7,7 @@ color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10, -10, -10 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 1 )
