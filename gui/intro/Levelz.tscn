@@ -17,38 +17,44 @@ margin_bottom = 56.0
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
 margin_left = 512.0
-margin_top = 56.0
+margin_top = 70.0
 margin_right = 512.0
-margin_bottom = 56.0
+margin_bottom = 70.0
 size_flags_horizontal = 3
 
 [node name="VSplitContainer" type="VSplitContainer" parent="CenterContainer"]
-margin_left = 32.0
-margin_top = 14.0
-margin_right = 991.0
-margin_bottom = 98.0
+margin_left = 131.0
+margin_right = 892.0
+margin_bottom = 140.0
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer/VSplitContainer"]
-margin_right = 959.0
-margin_bottom = 84.0
-columns = 6
+margin_right = 761.0
+margin_bottom = 140.0
+columns = 3
 
 [node name="LevelLoadButton" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
-margin_right = 317.0
-margin_bottom = 84.0
+margin_right = 251.0
+margin_bottom = 68.0
 text = " Level: 1"
 scene = "res://levelz/level-1/level-1.tscn"
 
 [node name="LevelLoadButton2" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
-margin_left = 321.0
-margin_right = 638.0
-margin_bottom = 84.0
+margin_left = 255.0
+margin_right = 506.0
+margin_bottom = 68.0
 text = " Level: 2"
 scene = "res://levelz/level-2/level-2.tscn"
 
 [node name="LevelLoadButton3" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
-margin_left = 642.0
-margin_right = 959.0
-margin_bottom = 84.0
+margin_left = 510.0
+margin_right = 761.0
+margin_bottom = 68.0
 text = " Level: 3"
 scene = "res://levelz/level-3/level-3.tscn"
+
+[node name="LevelLoadButton4" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 72.0
+margin_right = 251.0
+margin_bottom = 140.0
+text = " Level: 4"
+scene = "res://levelz/level-4/level-4.tscn"
