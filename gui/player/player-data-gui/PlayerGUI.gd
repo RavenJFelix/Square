@@ -9,4 +9,4 @@ func _ready():
 	pass # Replace with function body.
 
 func set_health(amt):
-	$Health.set_text("Health: " + String(amt))
+	$ColorRect/Health.set_text("Health: " + String(amt))
