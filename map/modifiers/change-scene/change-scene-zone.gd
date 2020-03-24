@@ -13,4 +13,5 @@ func _process(delta):
 	color.h += 0.001
 
 func _on_ChangeScene_body_entered(body):
-	get_tree().change_scene(scene)
+	if body.has_method("is_player"):
+		get_tree().change_scene(scene)
