@@ -401,6 +401,7 @@ scene = "res://levelz/level_0/level_0.tscn"
 
 [node name="ChangeScene3" parent="Double" instance=ExtResource( 3 )]
 position = Vector2( 11723.8, 472.592 )
+scene = "res://levelz/level-4/level-4.tscn"
 
 [node name="HurtPlatform" parent="Double" instance=ExtResource( 4 )]
 position = Vector2( 5214.4, 2455.06 )
