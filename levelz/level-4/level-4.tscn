@@ -26,7 +26,7 @@ position = Vector2( -1547.82, -157.054 )
 scale = Vector2( 153.874, 78.3309 )
 
 [node name="Player" parent="Double" instance=ExtResource( 2 )]
-position = Vector2( 4215.01, 1390.1 )
+position = Vector2( 236.443, -47.916 )
 
 [node name="Label" type="Label" parent="Double"]
 margin_left = 65.6788
@@ -311,6 +311,7 @@ scene = "res://levelz/level_0/level_0.tscn"
 position = Vector2( 1908.42, 1199.55 )
 scale = Vector2( 4.79153, 4.79153 )
 z_index = -4
+scene = "res://levelz/level_0/level_0.tscn"
 
 [node name="HurtPlatform" parent="." instance=ExtResource( 4 )]
 position = Vector2( 221.642, 75.4615 )
