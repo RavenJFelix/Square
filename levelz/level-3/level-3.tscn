@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://map/modifiers/change-scene/change-scene-zone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,7 +14,7 @@ position = Vector2( 1508.77, 138.336 )
 scale = Vector2( 153.874, 4.03115 )
 
 [node name="Player" parent="Double" instance=ExtResource( 2 )]
-position = Vector2( 9280.42, 556.152 )
+position = Vector2( 293.962, 9.32521 )
 
 [node name="Label" type="Label" parent="Double"]
 margin_left = 65.6788
@@ -400,3 +401,8 @@ scene = "res://levelz/level_0/level_0.tscn"
 
 [node name="ChangeScene3" parent="Double" instance=ExtResource( 3 )]
 position = Vector2( 11723.8, 472.592 )
+
+[node name="HurtPlatform" parent="Double" instance=ExtResource( 4 )]
+position = Vector2( 5214.4, 2455.06 )
+scale = Vector2( 1229.84, 97.2577 )
+damage_time = 0.1
