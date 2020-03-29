@@ -15,4 +15,5 @@ func _ready():
 
 
 func _on_LevelLoadButton_pressed():
+	print("CHANGE TO" + scene)
 	get_tree().change_scene(scene)
