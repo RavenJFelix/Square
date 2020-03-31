@@ -1,29 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://map/basicPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/pc/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://map/modifiers/change-scene/change-scene-zone.tscn" type="PackedScene" id=3]
-[ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=4]
+[ext_resource path="res://map/hazard/hurt-block/hurt-block.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Double" type="Node2D" parent="."]
 
-[node name="Polygon2D" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 1542.49, 535.621 )
-scale = Vector2( 53.8815, 26.4806 )
-
 [node name="Polygon2D2" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 548.091, 558.6 )
-scale = Vector2( 57.8061, 45.6581 )
-
-[node name="Polygon2D8" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 1456.51, -583.705 )
-scale = Vector2( 153.874, 28.2945 )
-
-[node name="Polygon2D11" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( -1547.82, -157.054 )
-scale = Vector2( 153.874, 78.3309 )
+position = Vector2( 2172.36, 558.6 )
+scale = Vector2( 351.409, 45.6581 )
 
 [node name="Player" parent="Double" instance=ExtResource( 2 )]
 position = Vector2( 236.443, -47.916 )
@@ -37,14 +24,6 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "The stakes are higher this time... You can die.
 
 These red blocks will damage you over time. Don't touch them for too long."
-
-[node name="Label11" type="Label" parent="Double"]
-margin_left = -689.375
-margin_top = 536.507
-margin_right = -226.375
-margin_bottom = 584.507
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Forsooth??? A fucking easter egg???"
 
 [node name="Label2" type="Label" parent="Double"]
 margin_left = 513.778
@@ -61,350 +40,156 @@ margin_right = 1069.16
 margin_bottom = -154.219
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 
-[node name="Label4" type="Label" parent="Double"]
-margin_left = 1513.31
-margin_top = 11.1334
-margin_right = 1868.31
-margin_bottom = 42.1334
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Ooohh, scary..."
-
-[node name="Label5" type="Label" parent="Double"]
-margin_left = 1936.1
-margin_top = -402.571
-margin_right = 2407.1
-margin_bottom = -354.571
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Try this you piece of scum."
-
-[node name="Label7" type="Label" parent="Double"]
-margin_left = 2425.86
-margin_top = -472.44
-margin_right = 2896.86
-margin_bottom = -424.44
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Feeling the burn?"
-
-[node name="Label10" type="Label" parent="Double"]
-margin_left = 4079.24
-margin_top = -341.034
-margin_right = 4550.24
-margin_bottom = -293.034
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Deep down we go!"
-
-[node name="Label13" type="Label" parent="Double"]
-margin_left = 4614.1
-margin_top = 976.143
-margin_right = 5085.1
-margin_bottom = 1024.14
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Don't die."
-
-[node name="Label17" type="Label" parent="Double"]
-margin_left = 3714.81
-margin_top = 1317.62
-margin_right = 4185.81
-margin_bottom = 1365.62
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Looks like lava. It isn't"
-
-[node name="Label18" type="Label" parent="Double"]
-margin_left = 2944.4
-margin_top = 1323.16
-margin_right = 3446.4
-margin_bottom = 1371.16
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "If the devs weren't lazy they could have added some fire sprites or something."
-
-[node name="Label19" type="Label" parent="Double"]
-margin_left = 2092.97
-margin_top = 1304.02
-margin_right = 2594.97
-margin_bottom = 1352.02
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Eat that sucker up."
-
-[node name="Label15" type="Label" parent="Double"]
-margin_left = 4649.9
-margin_top = 467.792
-margin_right = 5120.9
-margin_bottom = 515.792
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Down."
-
-[node name="Label16" type="Label" parent="Double"]
-margin_left = 4337.73
-margin_top = 709.796
-margin_right = 4808.73
-margin_bottom = 757.796
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "And down."
-
-[node name="Label14" type="Label" parent="Double"]
-margin_left = 4987.34
-margin_top = -269.377
-margin_right = 5458.34
-margin_bottom = -221.377
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "If you got here you are a hacker."
-
-[node name="Label8" type="Label" parent="Double"]
-margin_left = 5397.55
-margin_top = -806.239
-margin_right = 5868.55
-margin_bottom = -758.239
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Up high!!!"
-
-[node name="Label6" type="Label" parent="Double"]
-margin_left = 2507.5
-margin_top = 140.917
-margin_right = 2978.5
-margin_bottom = 188.918
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Quite a tight encounter.qq"
-
-[node name="Label9" type="Label" parent="Double"]
-margin_left = 4437.86
-margin_top = 233.06
-margin_right = 4908.86
-margin_bottom = 281.06
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Keep on going"
-
-[node name="Polygon2D10" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 3463.55, 632.032 )
-scale = Vector2( 68.2253, 39.6872 )
-
-[node name="Polygon2D4" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 2382.42, -788.307 )
-scale = Vector2( 76.7179, 20.7215 )
-
-[node name="Polygon2D17" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 1845.26, 720.75 )
-scale = Vector2( 109.027, 29.4767 )
-
 [node name="Polygon2D56" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 749.913, 88.0948 )
-scale = Vector2( 6.5685, 8.97929 )
-
-[node name="Polygon2D5" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 1096.08, 1762.28 )
-scale = Vector2( 54.8416, 82.7688 )
-
-[node name="Polygon2D6" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 5519.19, -642.417 )
-scale = Vector2( 199.389, 23.88 )
-
-[node name="Polygon2D13" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 2481.95, 2357.78 )
-scale = Vector2( 199.389, 23.88 )
-
-[node name="Polygon2D7" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 3410.55, -292.067 )
-scale = Vector2( 55.4572, 42.8655 )
-
-[node name="Polygon2D9" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 5686.16, 1305.15 )
-scale = Vector2( 63.2915, 146.035 )
-
-[node name="Polygon2D12" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 4665.75, 2997.39 )
-scale = Vector2( 63.2915, 146.035 )
-
-[node name="Polygon2D3" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 1893.1, -394.971 )
-scale = Vector2( 2.35517, 11.0989 )
-
-[node name="Polygon2D18" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 2606.77, -392.92 )
-scale = Vector2( 2.35517, 11.0989 )
-
-[node name="Polygon2D20" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 2941.34, -356.963 )
-scale = Vector2( 2.35517, 2.59639 )
-
-[node name="Polygon2D31" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 3941.52, -356.963 )
-scale = Vector2( 2.35517, 2.59639 )
-
-[node name="Polygon2D32" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 4090.4, -302.97 )
-scale = Vector2( 17.4981, 23.7559 )
-
-[node name="Polygon2D33" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 5958.19, -87.2788 )
-scale = Vector2( 18.8327, 5.80224 )
-
-[node name="Polygon2D36" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 4484.45, 361.143 )
-scale = Vector2( 18.8327, 5.22583 )
+position = Vector2( 713.444, 71.2493 )
+scale = Vector2( 3.72157, 8.30085 )
 
 [node name="Polygon2D57" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 4714.11, 590.804 )
-scale = Vector2( 18.8327, 5.22583 )
-
-[node name="Polygon2D59" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 4707.29, 1083.84 )
-scale = Vector2( 18.8327, 5.22583 )
-
-[node name="Polygon2D60" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 3800.22, 1465.74 )
-scale = Vector2( 9.93269, 2.56012 )
-
-[node name="Polygon2D61" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 3386.67, 1465.74 )
-scale = Vector2( 9.93269, 2.56012 )
-
-[node name="Polygon2D62" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 3002.46, 1465.74 )
-scale = Vector2( 9.93269, 2.56012 )
-
-[node name="Polygon2D63" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 3002.46, 1465.74 )
-scale = Vector2( 9.93269, 2.56012 )
-
-[node name="Polygon2D64" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 2632.54, 1465.74 )
-scale = Vector2( 9.93269, 2.56012 )
-
-[node name="Polygon2D65" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 2237.18, 1465.74 )
-scale = Vector2( 9.93269, 2.56012 )
-
-[node name="Polygon2D66" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 1888.06, 1465.74 )
-scale = Vector2( 9.93269, 2.56012 )
-
-[node name="Polygon2D67" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 1901.02, 1030.52 )
-scale = Vector2( 9.93269, 5.30373 )
-
-[node name="Polygon2D68" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 1900.16, 1132.89 )
-scale = Vector2( 6.67465, 6.02394 )
-polygon = PoolVector2Array( -10, -10, 10, -10, 10, 10, -5.10091, 10, -10, 10, -10, -10 )
+position = Vector2( 1014.38, 71.2494 )
+scale = Vector2( 3.72157, 8.30085 )
 
 [node name="Polygon2D58" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 4478.3, 810.213 )
-scale = Vector2( 18.8327, 5.22583 )
+position = Vector2( 1336.68, 72.302 )
+scale = Vector2( 3.72157, 8.30085 )
 
-[node name="Polygon2D34" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 6411.79, -214.791 )
-scale = Vector2( 111.622, 20.4734 )
+[node name="Polygon2D59" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 1627.05, 72.302 )
+scale = Vector2( 3.72157, 8.30085 )
 
-[node name="Polygon2D19" parent="Double" instance=ExtResource( 1 )]
-position = Vector2( 2261.38, -394.971 )
-scale = Vector2( 2.35517, 11.0989 )
+[node name="Polygon2D66" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 1912.65, 7.16487 )
+scale = Vector2( 3.72157, 14.8146 )
 
-[node name="ChangeScene" parent="Double" instance=ExtResource( 3 )]
-position = Vector2( 5428.45, -903.166 )
-scale = Vector2( 3.375, 4.27751 )
-scene = "res://levelz/level_0/level_0.tscn"
+[node name="Polygon2D60" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 4200.95, -100.576 )
+scale = Vector2( 227.729, 24.2054 )
 
-[node name="ChangeScene2" parent="Double" instance=ExtResource( 3 )]
-position = Vector2( -529.545, 687.067 )
-scene = "res://levelz/level_0/level_0.tscn"
+[node name="Polygon2D62" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 3802.61, -1357.57 )
+scale = Vector2( 227.729, 24.2054 )
 
-[node name="ChangeScene3" parent="Double" instance=ExtResource( 3 )]
-position = Vector2( 1908.42, 1199.55 )
-scale = Vector2( 4.79153, 4.79153 )
-z_index = -4
-scene = "res://levelz/level_0/level_0.tscn"
+[node name="Polygon2D63" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 3558.38, -374.02 )
+scale = Vector2( 3.72157, 8.30085 )
 
-[node name="HurtPlatform" parent="." instance=ExtResource( 4 )]
-position = Vector2( 221.642, 75.4615 )
+[node name="Polygon2D72" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 5058.29, -1643.95 )
+scale = Vector2( 3.72157, 8.30085 )
+
+[node name="Polygon2D67" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 4298.33, -374.02 )
+scale = Vector2( 3.72157, 8.30085 )
+
+[node name="Polygon2D70" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 5528.04, -373.452 )
+scale = Vector2( 16.8492, 4.76388 )
+
+[node name="Polygon2D71" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 6072.61, -632.568 )
+scale = Vector2( 9.67663, 2.73594 )
+
+[node name="Polygon2D74" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 6513.31, -701.063 )
+scale = Vector2( 9.67663, 2.73594 )
+
+[node name="Polygon2D75" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 6962.49, -859.333 )
+scale = Vector2( 9.67663, 2.73594 )
+
+[node name="Polygon2D76" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 6591.69, -1047.75 )
+scale = Vector2( 9.67663, 2.73594 )
+
+[node name="Polygon2D77" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 6260.07, -1264.81 )
+scale = Vector2( 9.67663, 2.73594 )
+
+[node name="Polygon2D78" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 6637.8, -1439.64 )
+scale = Vector2( 9.67663, 2.73594 )
+
+[node name="Polygon2D79" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 6247.12, -1623.11 )
+scale = Vector2( 9.67663, 2.73594 )
+
+[node name="Polygon2D69" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 5052.97, -374.02 )
+scale = Vector2( 3.72157, 8.30085 )
+
+[node name="Polygon2D61" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 3190.08, -483.206 )
+scale = Vector2( 3.72157, 19.2195 )
+
+[node name="Polygon2D68" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 3930.04, -374.02 )
+scale = Vector2( 3.72157, 8.30085 )
+
+[node name="Polygon2D65" parent="Double" instance=ExtResource( 1 )]
+position = Vector2( 2797.01, -410.107 )
+scale = Vector2( 3.72157, 11.9096 )
+
+[node name="HurtPlatform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 182.179, 90.9029 )
 scale = Vector2( 16.6092, 2.64943 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1857.79, 221.615 )
-scale = Vector2( 4.88033, 5.25585 )
+[node name="HurtPlatform2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2399.33, -386.33 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2365.41, 377.376 )
-scale = Vector2( 4.88033, 5.25585 )
+[node name="HurtPlatform6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2399.34, -1656.26 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4011.7, -16.304 )
-scale = Vector2( 4.88033, 5.25585 )
+[node name="HurtPlatform9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3529.71, -1656.26 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform8" parent="." instance=ExtResource( 4 )]
-position = Vector2( 5025.94, 325.35 )
-scale = Vector2( 4.88033, 5.25585 )
+[node name="HurtPlatform10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3124.38, -1656.26 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform9" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4184.14, 644.167 )
-scale = Vector2( 4.88033, 5.25585 )
+[node name="HurtPlatform11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2746.75, -1656.26 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform10" parent="." instance=ExtResource( 4 )]
-position = Vector2( 5028.28, 937.497 )
-scale = Vector2( 4.88033, 5.25585 )
+[node name="HurtPlatform3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4695.54, -386.33 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform16" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2813.79, 1882.88 )
-scale = Vector2( 127.885, 27.469 )
+[node name="HurtPlatform7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4695.54, -1656.26 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform11" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4808.91, 1537.89 )
-scale = Vector2( 3.10064, 3.33922 )
+[node name="HurtPlatform4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4695.54, -386.33 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform12" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4643.65, 1537.89 )
-scale = Vector2( 3.10064, 3.33922 )
+[node name="HurtPlatform5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3924.38, -1656.26 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
 
-[node name="HurtPlatform13" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4643.65, 1537.89 )
-scale = Vector2( 3.10064, 3.33922 )
-z_index = -1
-color = Color( 0.258824, 0, 0, 1 )
-
-[node name="HurtPlatform14" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4491.02, 1537.89 )
-scale = Vector2( 3.10064, 3.33922 )
-z_index = -1
-color = Color( 0.258824, 0, 0, 1 )
-
-[node name="HurtPlatform15" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4321.54, 1537.89 )
-scale = Vector2( 3.10064, 3.33922 )
-z_index = -1
-color = Color( 0.258824, 0, 0, 1 )
-
-[node name="HurtPlatform2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1911.69, -128.786 )
-scale = Vector2( 4.88033, 5.25585 )
-z_index = -1
-color = Color( 0.258824, 0, 0, 1 )
-
-[node name="HurtPlatform6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2277.13, -217.525 )
-scale = Vector2( 4.88033, 5.25585 )
-z_index = -1
-color = Color( 0.258824, 0, 0, 1 )
-
-[node name="HurtPlatform3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1434.5, 220.028 )
-scale = Vector2( 4.88033, 5.25585 )
+[node name="HurtPlatform8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4341.93, -1656.26 )
+scale = Vector2( 3.76695, 6.45801 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
