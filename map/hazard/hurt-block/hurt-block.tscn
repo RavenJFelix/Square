@@ -6,9 +6,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="HurtPlatform" type="Polygon2D"]
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.207843, 0, 0, 1 )
 polygon = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10, -10, -10 )
 script = ExtResource( 1 )
+damage_time = 0.66
 damage_color = Color( 1, 0, 0, 1 )
 regular_color = Color( 0.686275, 0, 0, 1 )
 
