@@ -58,3 +58,19 @@ margin_right = 251.0
 margin_bottom = 140.0
 text = " Level: 4"
 scene = "res://levelz/level-4/level-4.tscn"
+
+[node name="LevelLoadButton5" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 255.0
+margin_top = 72.0
+margin_right = 506.0
+margin_bottom = 140.0
+text = " Level: 5"
+scene = "res://levelz/level-5/level-5.tscn"
+
+[node name="LevelLoadButton6" parent="CenterContainer/VSplitContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 510.0
+margin_top = 72.0
+margin_right = 761.0
+margin_bottom = 140.0
+text = " Level: 6"
+scene = "res://levelz/level-6/level-6.tscn"
