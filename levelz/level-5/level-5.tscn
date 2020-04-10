@@ -130,7 +130,6 @@ z_index = -1
 [node name="ChangeScene" parent="Double" instance=ExtResource( 4 )]
 position = Vector2( 6100.34, -1691.13 )
 scale = Vector2( 3.11133, 2.35504 )
-scene = "res://levelz/level-5/level-5.tscn"
 
 [node name="HurtPlatform2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2399.33, -386.33 )
@@ -161,8 +160,3 @@ position = Vector2( 6246.48, -1656.95 )
 scale = Vector2( 1.55164, 3.61401 )
 z_index = -1
 color = Color( 0.258824, 0, 0, 1 )
-
-[node name="HurtPlatform" parent="." instance=ExtResource( 3 )]
-position = Vector2( 190.704, 91.9691 )
-scale = Vector2( 8.13827, 2.22038 )
-z_index = -1
